@@ -1,0 +1,18 @@
+// Typography
+$sans:					  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//Colors
+$header-color:    #fff;
+
+
+//Size adjustments
+
+$base-size:				15;
+$leading:				  22;
+
+$lineheight:			($leading/$base-size) * 1em;
+
+
+// breakpoints
+$mobile:          new-breakpoint(max-width 480px);
+$desktop:         new-breakpoint(min-width 850px);

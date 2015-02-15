@@ -1,0 +1,46 @@
+[role="banner"] {
+
+  background: #000 url(/build/images/header.jpg) no-repeat fixed;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 12em 0;
+
+  //just for now, to change background color..
+  @include filter(grayscale(25%));
+
+  h1 {
+    font-size: 6.3em;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    margin-top: 0;
+    width: 70%;
+    margin: auto;
+    @include media($mobile) {
+      font-size: 3em;
+    }
+
+    em {
+      font-style: normal;
+      display: block;
+      font-family: $sans;
+      font-size: .23em;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 1em;
+    }
+  }
+
+  h2 {
+    font-family: $sans;
+    font-size: 1.3em;
+    letter-spacing: .1em;
+    margin-bottom: 1em;
+    font-weight: normal;
+    margin-left: 45%;
+  }
+  color: $header-color;
+
+}
