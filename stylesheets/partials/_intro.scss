@@ -8,6 +8,11 @@
     color: black;
     font-family: $sans;
     text-align: center;
-    margin: 0 25%;
+    margin: 0 15%;
+    padding-bottom: 8em;
+
+    @include media($mobile){
+      margin: 0;
+    }
   }
 }
