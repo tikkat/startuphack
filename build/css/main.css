@@ -737,8 +737,10 @@ a {
   padding-bottom: 8em; }
 
 .info p {
-  text-align: left;
-  margin: 1.33333em 25%; }
+  text-align: left; }
+  @media screen and (min-width: 850px) {
+    .info p {
+      margin: 1.33333em 25%; } }
 
 .ocean-break {
   background: #000 url(/build/images/ocean.png) no-repeat;
@@ -877,8 +879,7 @@ p {
   bottom: 70px; }
 
 footer {
-  margin: 0;
-  /* padding: 0 20vw; */ }
+  margin: 0; }
 
 .info-footer .line {
   display: block;
