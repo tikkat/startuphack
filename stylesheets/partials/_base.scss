@@ -5,5 +5,12 @@
 @import "../modules/all";
 
 html {
-  background-color: #fdfdfd;
+  background-color:  $base-background-color;
+  color:             $base-text-color;
+}
+
+a {
+  text-decoration: none;
+  color: #428bca;
+  font-weight: 600;
 }

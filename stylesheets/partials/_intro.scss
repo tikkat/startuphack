@@ -2,17 +2,17 @@
 
   h1 {
     padding-top: 1em;
+    text-decoration: none;
+
+    span {
+      border-bottom-style: solid;
+      border-bottom-width: 4px;
+      text-decoration: none;
+    }
+
   }
 
   p {
-    color: black;
-    font-family: $sans;
-    text-align: center;
-    margin: 0 15%;
     padding-bottom: 8em;
-
-    @include media($mobile){
-      margin: 0;
-    }
   }
 }

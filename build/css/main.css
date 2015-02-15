@@ -718,25 +718,33 @@ th {
 Vertical align
 */
 html {
-  background-color: #fdfdfd; }
+  background-color: #fdfdfd;
+  color: #424242; }
+
+a {
+  text-decoration: none;
+  color: #428bca;
+  font-weight: 600; }
 
 .intro h1 {
-  padding-top: 1em; }
+  padding-top: 1em;
+  text-decoration: none; }
+  .intro h1 span {
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    text-decoration: none; }
 .intro p {
-  color: black;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  margin: 0 15%;
   padding-bottom: 8em; }
-  @media screen and (max-width: 480px) {
-    .intro p {
-      margin: 0; } }
+
+.info p {
+  text-align: left;
+  margin: 1.33333em 25%; }
 
 .ocean-break {
   background: #000 url(/build/images/ocean.png) no-repeat;
   background-position: center -200px;
   width: 100vw;
-  height: 50vh; }
+  height: 70vh; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -746,20 +754,31 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.75em;
   font-family: Pacifico;
-  margin: 0.73333em 0; }
+  margin: 0.66667em 0; }
 
 h2 {
   font-size: 1.75em;
-  margin: 0.73333em 0; }
+  margin: 0.66667em 0; }
 
 h3 {
   font-weight: 600;
   font-size: 1em;
-  margin-bottom: 0.73333em; }
+  margin-bottom: 0.66667em; }
 
 h4 {
   font-weight: bold;
   font-size: 0.9375em; }
+
+p {
+  font-size: 20px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  line-height: 170%;
+  margin: 0 15% 1.33333em; }
+  @media screen and (max-width: 480px) {
+    p {
+      margin: 0 10%; } }
 
 [role="banner"] {
   background: #000 url(/build/images/header.jpg) no-repeat fixed;
@@ -812,3 +831,18 @@ h4 {
   [role="banner"] > div .min-info {
     margin-top: 50px;
     font-size: 2em; }
+
+footer {
+  margin: 0;
+  /* padding: 0 20vw; */ }
+
+.info-footer .line {
+  display: block;
+  content: "";
+  border-top: 1px solid #e2e2e2;
+  margin: 1.46667em auto;
+  max-width: 10em;
+  width: 50%; }
+.info-footer p {
+  font-size: 16px;
+  text-align: center; }

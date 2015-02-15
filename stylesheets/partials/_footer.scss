@@ -1,0 +1,21 @@
+footer {
+
+  margin: 0;
+  /* padding: 0 20vw; */
+}
+
+.info-footer {
+  .line {
+    display: block;
+    content: "";
+    border-top: 1px solid #e2e2e2;
+    margin: 1.46667em auto;
+    max-width: 10em;
+    width: 50%;
+  }
+
+  p {
+    font-size: $footer-font-size;
+    text-align: center;
+  }
+}
