@@ -3,7 +3,6 @@
   background: #000 url(/build/images/header.jpg) no-repeat fixed;
   min-height: 100vh;
   height: 100vh;
-  overflow: hidden;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -16,29 +15,42 @@
 
 [role="banner"]>div {
   @include vertical-align;
-
+  color: $header-color;
   
+  //"Startup Hack"
   h1 {
-    font-size: 6.3em;
     text-align: center;
     width: 70%;
     margin: auto;
+    font-size: 6em;
     @include media($mobile) {
-      font-size: 3em;
+      font-size: 4em;
+    }
+    @include media($desktop) {
+      font-size: 6em;
+    }
+    @include media($desktop-wide) {
+      font-size: 10em;
+      white-space: nowrap;
     }
 
+    //"Gothenburg"
     em {
       font-style: normal;
       display: block;
       font-family: $sans;
-      font-size: .25em;
+      font-size: .20em;
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 1em;
       transform: translateX(1em);
+      @include media($desktop) {
+        font-size: .15em;
+      }
     }
   }
 
+  //"Together with Spotify"
   h2 {
     text-align: center;
     font-family: $sans;
@@ -46,13 +58,30 @@
     margin-bottom: 1em;
     font-weight: normal;
   }
+  //"Together with Spotify" needs to be moved for styliiish
   .coop {
     font-size: 1.3em;
     margin-left: 30%;
+    @include media($mobile) {
+      font-size: 0.8em;
+      margin-left: 20%;
+    }
   }
+  //Needs to have a lil' bit of margin top.
   .min-info {
     margin-top: 50px;
-    font-size: 2em;
+    @include media($mobile) {
+      font-size: 1.2em;
+    }
+    @include media($desktop) {
+      font-size: 2em;
+    }
   }
-  color: $header-color;
+}
+
+//Style in button. Position here.
+.apply-button {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 70px;
 }
