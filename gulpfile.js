@@ -7,7 +7,6 @@ var gulp          = require('gulp');
     rename        = require('gulp-rename'),
     images        = require('gulp-imagemin');
 
-
 /* Paths
 -------------------------------------*/
 var paths = {
