@@ -63,7 +63,7 @@ function notifyLiveReload(event) {
 /* Watchers
 -------------------------------------*/
 gulp.task('watch', function() {
-  gulp.watch(paths.scss, ['styles']);
+  gulp.watch('stylesheets/**/*.scss', ['styles']);
   gulp.watch(paths.html, notifyLiveReload);
   gulp.watch(paths.cssReload, notifyLiveReload);
 });

@@ -1,8 +1,11 @@
 [role="banner"] {
 
   background: #000 url(/build/images/header.jpg) no-repeat fixed;
+  min-height: 100%;
   height: 100%;
+  overflow: hidden;
   background-size: cover;
+  background-position: center center;
   position: relative;
   text-align: center;
   padding: 12em 0;
