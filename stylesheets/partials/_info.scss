@@ -1,0 +1,10 @@
+.info{
+  p {
+    text-align: left;
+    @include media($desktop){
+      margin: $lineheight 25%;  
+    }
+
+
+  }
+}
