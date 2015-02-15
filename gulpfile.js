@@ -4,7 +4,8 @@ var gulp          = require('gulp');
     sass          = require('gulp-ruby-sass'),
     autoprefixer  = require('gulp-autoprefixer'),
     minifycss     = require('gulp-minify-css'),
-    rename        = require('gulp-rename');
+    rename        = require('gulp-rename'),
+    images        = require('gulp-imagemin');
 
 
 /* Paths
@@ -59,6 +60,14 @@ function notifyLiveReload(event) {
   });
 }
 
+// Image minifyer
+gulp.task("images", function(){
+  gulp.src(["res/images/*.jpg", "res/images/*.png"])
+    .pipe(images({
+      progressive: true
+    }))
+    .pipe(gulp.dest("build/images"));
+});
 
 /* Watchers
 -------------------------------------*/
