@@ -58,20 +58,37 @@
     margin-bottom: 1em;
     font-weight: normal;
   }
+
+  .collabaration {
+    display: inline-block;
+  }
   //"Together with Spotify" needs to be moved for styliiish
   .coop {
+    display: inline-block;
     font-size: 1.3em;
-    margin-left: 30%;
     @include media($mobile) {
       font-size: 0.8em;
-      margin-left: 20%;
+      margin-left: 0;
     }
+    @include media($desktop-wide) {
+      margin-left: 30%;
+    }
+  }
+
+  .spotify-logo {
+    display: inline-block;
+    position: relative;
+    transform: translateY(40%);
+    margin-left: 10px;
   }
   //Needs to have a lil' bit of margin top.
   .min-info {
     margin-top: 50px;
     @include media($mobile) {
       font-size: 1.2em;
+    }
+    @include media($tablet) {
+      font-size: 1.5em;
     }
     @include media($desktop) {
       font-size: 2em;
@@ -81,7 +98,12 @@
 
 //Style in button. Position here.
 .apply-button {
+  @include clearfix;
+
   position: absolute;
   transform: translateX(-50%);
   bottom: 70px;
+  @include media($mobile) {
+    bottom: 120px;
+  }
 }
