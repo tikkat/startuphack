@@ -723,7 +723,11 @@ html {
   color: black;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
-  margin: 0 25%; }
+  margin: 0 15%;
+  padding-bottom: 8em; }
+  @media screen and (max-width: 480px) {
+    .intro p {
+      margin: 0; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
