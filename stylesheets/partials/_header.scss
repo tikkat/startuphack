@@ -1,5 +1,10 @@
-[role="banner"] {
+//ETT LÄGE FÖR FULLSKÄRM
+//ETT LÄGE FÖR LITEN HEIGHT
+//ETT LÄGE FÖR LITEN WIDTH
+//ETT LÄGE FÖR BÅDE LITEN WIDTH/HEIGHT
 
+[role="banner"] {
+  @include clearfix;
   background: #000 url(/build/images/header.jpg) no-repeat fixed;
   min-height: 100vh;
   height: 100vh;
@@ -7,31 +12,60 @@
   background-position: center center;
   position: relative;
   text-align: center;
-  padding: 12em 0;
+  overflow: hidden;
 
+  color: $header-color;
   //just for now, to change background color..
   @include filter(grayscale(60%));
 }
 
-[role="banner"]>div {
-  @include vertical-align;
-  color: $header-color;
+.header-text {
+  width: 100vw;
+  padding-top: 20vh;
+  //Change padding on small width
+  @include media($mobile) {
+    padding-top: 10vh;
+  }
+  //Give some space when widescreen
+  @include media($desktop-wide) {
+    padding-top: 10vh;
+    //With lots of pixels, this will come in handy
+    @include media($height-hd) {
+      padding-top: 25vh;
+    }
+  }
+  //Extreme cases
+  @include media($height-small) {
+    float: left;
+    padding-top: 20vh;
+    width: 50vw;
+    height: 100vh;
+  }
   
   //"Startup Hack"
   h1 {
     text-align: center;
-    width: 70%;
     margin: auto;
-    font-size: 6em;
+    font-size: 10vmax;
+    //For textwrap on small width
     @include media($mobile) {
-      font-size: 4em;
+      font-size: 12vmax;
+      padding: 0 7%;
     }
+    //To limit size when shown on widescreen
     @include media($desktop) {
-      font-size: 6em;
+      font-size: 7vmax;
     }
+    //Set size for wides
     @include media($desktop-wide) {
-      font-size: 10em;
-      white-space: nowrap;
+      font-size: 8em;
+    }
+    //Extreme case
+    @include media($height-small) {
+      font-size: 10vmin;
+    }
+    @include media($height-special-case) {
+      font-size: 15vmin;
     }
 
     //"Gothenburg"
@@ -39,13 +73,16 @@
       font-style: normal;
       display: block;
       font-family: $sans;
-      font-size: .20em;
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 1em;
       transform: translateX(1em);
-      @include media($desktop) {
-        font-size: .15em;
+      font-size: 2vmax;
+      @include media($height-small) {
+        font-size: 4vmin;
+      }
+      @include media($height-special-case) {
+        font-size: 3vmin;
       }
     }
   }
@@ -57,38 +94,71 @@
     letter-spacing: .1em;
     margin-bottom: 1em;
     font-weight: normal;
+    @include media($height-small) {
+        font-size: 5vmin;
+    }
   }
+}
 
-  .collabaration {
+.collaboration {
+    width: 100vw;
     display: inline-block;
-  }
-  //"Together with Spotify" needs to be moved for styliiish
-  .coop {
-    display: inline-block;
-    font-size: 1.3em;
-    @include media($mobile) {
-      font-size: 0.8em;
-      margin-left: 0;
+    //fix so it's not center on desktops
+    @include media($desktop) {
+      padding-left: 50vw;
     }
-    @include media($desktop-wide) {
-      margin-left: 30%;
+    @include media($height-small) {
+      width: 50vw;
+      padding-top: 20vh;
+      padding-left: 0;
     }
-  }
+    @include media($height-small) {
+      float: right;
+      padding-top: 20vh;
+      width: 50vw;
+    }
 
-  .spotify-logo {
-    display: inline-block;
-    position: relative;
-    transform: translateY(40%);
-    margin-left: 10px;
-  }
-  //Needs to have a lil' bit of margin top.
-  .min-info {
-    margin-top: 50px;
-    @include media($mobile) {
-      font-size: 1.2em;
+    //"in collaboration with - "
+    h2 {
+      display: inline-block;
+      font-size: 4vw;
+      //make sure size not too small on small screen
+      @include media($mobile) {
+        font-size: 4vw;
+      }
+      @include media($desktop) {
+        font-size: 1.5vw;
+      }
+      //Remove margin in extreme case
+      @include media($height-small) {
+        font-size: 5vmin;
+        vertical-align: middle;
+      }
     }
-    @include media($tablet) {
-      font-size: 1.5em;
+    //Spotify logo
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      width: 20vw;
+      @include media($mobile) {
+        width: 30vw;
+      }
+      @include media($desktop) {
+        width: 200px;
+      }
+    }
+}
+
+.banner-info {
+  @include media($height-small) {
+    width: 50vw;
+    float: left;   
+  }
+  h2 {
+    font-size: 4vw;
+    @include media($mobile) {
+      margin: 5vh 0;
     }
     @include media($desktop) {
       font-size: 2em;
@@ -96,14 +166,20 @@
   }
 }
 
-//Style in button. Position here.
-.apply-button {
-  @include clearfix;
-
-  position: absolute;
-  transform: translateX(-50%);
-  bottom: 70px;
-  @include media($mobile) {
-    bottom: 120px;
+.header-buttons {
+  @include media($height-small) {
+    width: 50vw;
+    float: right;   
   }
+}
+
+.apply-button {
+  @include media($height-small) {
+    font-size: 0.8em;
+    padding: 10px 20px;
+  }
+}
+
+.apply-button:hover {
+
 }
