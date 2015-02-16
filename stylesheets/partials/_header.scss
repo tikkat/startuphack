@@ -25,6 +25,15 @@
   //Change padding on small width
   @include media($mobile) {
     padding-top: 10vh;
+    @include media($height-hd) {
+      padding-top: 20vh;
+    }
+  }
+  @include media($mobile-wide) {
+    padding-top: 10vh;
+    @include media($height-hd) {
+      padding-top: 20vh;
+    }
   }
   //Give some space when widescreen
   @include media($desktop-wide) {
@@ -37,9 +46,21 @@
   //Extreme cases
   @include media($height-small) {
     float: left;
-    padding-top: 20vh;
+    padding-top: 35vh;
     width: 50vw;
     height: 100vh;
+    @include media($mobile) {
+      padding-top: 20vh;
+    }
+    @include media($mobile-wide) {
+     padding-top: 20vh;
+    }
+    @include media($tablet) {
+      padding-top: 20vh;
+    }
+    // @include media($desktop-wide) {
+    //   padding-top: 30vh;
+    // }
   }
   
   //"Startup Hack"
@@ -51,6 +72,9 @@
     @include media($mobile) {
       font-size: 12vmax;
       padding: 0 7%;
+      @include media($height-hd) {
+        font-size: 10vmax;
+      }
     }
     //To limit size when shown on widescreen
     @include media($desktop) {
@@ -58,7 +82,7 @@
     }
     //Set size for wides
     @include media($desktop-wide) {
-      font-size: 8em;
+      font-size: 7.5em;
     }
     //Extreme case
     @include media($height-small) {
@@ -66,6 +90,13 @@
     }
     @include media($height-special-case) {
       font-size: 15vmin;
+      @include media($mobile) {
+        font-size: 14vmin;
+      }
+      @include media($desktop) {
+        font-size: 5vw;
+      }
+
     }
 
     //"Gothenburg"
@@ -83,19 +114,10 @@
       }
       @include media($height-special-case) {
         font-size: 3vmin;
+        @include media($desktop) {
+         font-size: 1.2vw;  
+        }
       }
-    }
-  }
-
-  //"Together with Spotify"
-  h2 {
-    text-align: center;
-    font-family: $sans;
-    letter-spacing: .1em;
-    margin-bottom: 1em;
-    font-weight: normal;
-    @include media($height-small) {
-        font-size: 5vmin;
     }
   }
 }
@@ -108,14 +130,22 @@
       padding-left: 50vw;
     }
     @include media($height-small) {
-      width: 50vw;
-      padding-top: 20vh;
-      padding-left: 0;
-    }
-    @include media($height-small) {
       float: right;
-      padding-top: 20vh;
+      padding-top: 30vh;
+      padding-left: 0;
       width: 50vw;
+      @include media($mobile) {
+       padding-top: 20vh;
+      }
+      @include media($mobile-wide) {
+       padding-top: 20vh;
+      }
+      @include media($tablet) {
+       padding-top: 20vh;
+      }
+      @include media($desktop-wide) {
+        padding-top: 20vh;
+      }
     }
 
     //"in collaboration with - "
@@ -160,8 +190,11 @@
     @include media($mobile) {
       margin: 5vh 0;
     }
+    @include media($height-small) {
+      font-size: 1em;
+    }
     @include media($desktop) {
-      font-size: 2em;
+      font-size: 1.50em;
     }
   }
 }
@@ -174,12 +207,39 @@
 }
 
 .apply-button {
+  @include media($height-special-case) {
+    font-size: 1em;
+    padding: 15px 30px;
+  }
   @include media($height-small) {
-    font-size: 0.8em;
-    padding: 10px 20px;
+    font-size: 1em;
+    padding: 15px 30px;
+  }
+  @include media($desktop-wide) {
+    @include media($height-hd) {
+      padding: 30px 60px;
+      font-size: 3em;
+    }
   }
 }
 
 .apply-button:hover {
 
+}
+
+.arrow-down {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1vh;
+  @include media($height-hd) {
+      padding-bottom: 5vh;
+  }
+  button {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    img {
+      width: 20px;
+    }
+  }
 }
