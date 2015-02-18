@@ -1,11 +1,6 @@
-//ETT LÄGE FÖR FULLSKÄRM
-//ETT LÄGE FÖR LITEN HEIGHT
-//ETT LÄGE FÖR LITEN WIDTH
-//ETT LÄGE FÖR BÅDE LITEN WIDTH/HEIGHT
-
 [role="banner"] {
   @include clearfix;
-  background: #000 url(/build/images/header.jpg) no-repeat fixed;
+  background: #000 url(/build/images/GBGSH_header.jpg) no-repeat fixed;
   min-height: 100vh;
   height: 100vh;
   background-size: cover;
@@ -16,7 +11,7 @@
 
   color: $header-color;
   //just for now, to change background color..
-  @include filter(grayscale(60%));
+  //@include filter(grayscale(60%));
 }
 
 .header-text {
@@ -94,7 +89,10 @@
         font-size: 14vmin;
       }
       @include media($desktop) {
-        font-size: 5vw;
+        font-size: 8vw;
+      }
+      @include media($desktop-wide) {
+        font-size: 20vmin;
       }
 
     }
@@ -108,7 +106,7 @@
       font-weight: 500;
       letter-spacing: 1em;
       transform: translateX(1em);
-      font-size: 2vmax;
+      font-size: .2em;
       @include media($height-small) {
         font-size: 4vmin;
       }
@@ -127,7 +125,7 @@
     display: inline-block;
     //fix so it's not center on desktops
     @include media($desktop) {
-      padding-left: 50vw;
+      padding-left: 30vw;
     }
     @include media($height-small) {
       float: right;
@@ -195,6 +193,13 @@
     }
     @include media($desktop) {
       font-size: 1.50em;
+      margin-top: 10vh;
+      @include media($height-special-case) {
+        font-size: 1em;
+        margin-top: 5vh;
+      }
+      // @include media($height-hd) {
+      // }
     }
   }
 }
@@ -218,7 +223,8 @@
   @include media($desktop-wide) {
     @include media($height-hd) {
       padding: 30px 60px;
-      font-size: 3em;
+      font-size: 2em;
+      margin-top: 2vh;
     }
   }
 }
@@ -240,6 +246,11 @@
     border: 0;
     img {
       width: 20px;
+      @include media($desktop-wide) {
+        @include media($height-hd2) {
+          width: 30px;
+        }
+      }
     }
   }
 }
