@@ -1,4 +1,5 @@
 .the-day {
+  text-align: center;
   background: linear-gradient(
   rgba(0, 0, 0, 0.15),
   rgba(0, 0, 0, 0.0)
@@ -13,10 +14,12 @@
     padding: 1em;
   }
 
-  button {
-    
-    top: 50%;
-    left: 50%;
+  .ghost-btn {
+    font-size: 1em;
+    margin: 0 1em 0 1em;
+    width: 10em;
 
   }
+
+
 }
