@@ -749,7 +749,7 @@ a {
   background: #000 url(/build/images/ocean.png) no-repeat;
   background-position: center -200px;
   width: 100vw;
-  height: 70vh; }
+  height: 35vh; }
 
 .apply-button {
   background-color: rgba(255, 255, 255, 0);
@@ -805,7 +805,8 @@ p {
       margin: 0 10%; } }
 
 [role="banner"] {
-  background: #000 url(/build/images/GBGSH_header.jpg) no-repeat fixed;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/build/images/GBGSH_header.jpg) no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/build/images/GBGSH_header.jpg) no-repeat fixed;
   min-height: 100vh;
   height: 100vh;
   background-size: cover;
