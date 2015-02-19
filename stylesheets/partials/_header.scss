@@ -13,268 +13,267 @@
   overflow: hidden;
 
   color: $header-color;
-  //just for now, to change background color..
-  //@include filter(grayscale(60%));
-}
 
-.header-text {
-  //"Startup Hack"
-  text-align: center;
-  margin: auto;
-  font-size: 10vmax;
-  display: block;
-  //For textwrap on small width
-  @include media($mobile) {
-    font-size: 12vmax;
-    //padding: 0 7%;
-    @include media($height-hd) {
-      font-size: 10vmax;
-    }
-  }
-  //To limit size when shown on widescreen
-  @include media($desktop) {
-    font-size: 7vmax;
-  }
-  //Set size for wides
-  @include media($desktop-wide) {
-    font-size: 7.5em;
-  }
-  //Extreme case
-  @include media($height-small) {
-    font-size: 10vmin;
-    //Extreme cases
-    float: left;
-    padding-top: 35vh;
-    width: 50vw;
-    @include media($mobile) {
-      padding-top: 20vh;
-    }
-    @include media($mobile-wide) {
-     padding-top: 20vh;
-    }
-    @include media($tablet) {
-      padding-top: 20vh;
-    }
-  }
-  @include media($height-special-case) {
-    font-size: 15vmin;
-    @include media($mobile) {
-      font-size: 14vmin;
-    }
-    @include media($desktop) {
-      font-size: 8vw;
-    }
-    @include media($desktop-wide) {
-      font-size: 20vmin;
-    }
-  }
 
-  //"Gothenburg"
-  em {
-    font-style: normal;
+  .header-text {
+    //"Startup Hack"
+    text-align: center;
+    margin: auto;
+    font-size: 10vmax;
     display: block;
-    font-family: $sans;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1em;
-    transform: translateX(1em);
-    font-size: .2em;
-    @include media($height-small) {
-      font-size: 4vmin;
-      @include media($desktop) {
-        font-size: 7vmin;
-      }
-    }
-    @include media($height-special-case) {
-      font-size: 3vmin;
-      @include media($desktop) {
-       font-size: 1.2vw;
-      }
-    }
-    //width: 100vw;
-    padding-top: 20vh;
-    //Change padding on small width
+    //For textwrap on small width
     @include media($mobile) {
-      padding-top: 10vh;
+      font-size: 12vmax;
+      //padding: 0 7%;
       @include media($height-hd) {
-        padding-top: 20vh;
+        font-size: 10vmax;
       }
     }
-    @include media($mobile-wide) {
-      padding-top: 10vh;
-      @include media($height-hd) {
-        padding-top: 20vh;
-      }
+    //To limit size when shown on widescreen
+    @include media($desktop) {
+      font-size: 7vmax;
     }
-    //Give some space when widescreen
+    //Set size for wides
     @include media($desktop-wide) {
-      padding-top: 10vh;
-      //With lots of pixels, this will come in handy
-      @include media($height-hd) {
-        padding-top: 25vh;
-      }
+      font-size: 7.5em;
     }
-    //Extreme cases
+    //Extreme case
     @include media($height-small) {
+      font-size: 10vmin;
+      //Extreme cases
       float: left;
       padding-top: 35vh;
       width: 50vw;
       @include media($mobile) {
-        padding-top: 3vh;
-      }
-      @include media($mobile-wide) {
-       padding-top: 3vh;
-      }
-      @include media($tablet) {
-        padding-top: 3vh;
-      }
-    }
-  }
-}
-
-.collaboration {
-    width: 100vw;
-    display: inline-block;
-    //fix so it's not center on desktops
-    @include media($desktop) {
-      padding-left: 30vw;
-    }
-    @include media($height-small) {
-      float: right;
-      padding-top: 30vh;
-      padding-left: 0;
-      width: 50vw;
-      @include media($mobile) {
-       padding-top: 20vh;
+        padding-top: 20vh;
       }
       @include media($mobile-wide) {
        padding-top: 20vh;
       }
       @include media($tablet) {
-       padding-top: 20vh;
-      }
-      @include media($desktop-wide) {
         padding-top: 20vh;
       }
     }
-
-    //"in collaboration with - "
-    h2 {
-      display: inline-block;
-      font-size: 4vw;
-      //make sure size not too small on small screen
+    @include media($height-special-case) {
+      font-size: 15vmin;
       @include media($mobile) {
-        font-size: 4vw;
+        font-size: 14vmin;
       }
       @include media($desktop) {
-        font-size: 1.5vw;
+        font-size: 8vw;
       }
-      //Remove margin in extreme case
+      @include media($desktop-wide) {
+        font-size: 20vmin;
+      }
+    }
+
+    //"Gothenburg"
+    em {
+      font-style: normal;
+      display: block;
+      font-family: $default-font;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1em;
+      transform: translateX(1em);
+      font-size: .2em;
       @include media($height-small) {
-        font-size: 5vmin;
-        vertical-align: middle;
+        font-size: 4vmin;
+        @include media($desktop) {
+          font-size: 7vmin;
+        }
       }
-    }
-    //Spotify logo
-    img {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px;
-      width: 20vw;
+      @include media($height-special-case) {
+        font-size: 3vmin;
+        @include media($desktop) {
+         font-size: 1.2vw;
+        }
+      }
+      //width: 100vw;
+      padding-top: 20vh;
+      //Change padding on small width
       @include media($mobile) {
-        width: 30vw;
+        padding-top: 10vh;
+        @include media($height-hd) {
+          padding-top: 20vh;
+        }
       }
-      @include media($desktop) {
-        width: 200px;
+      @include media($mobile-wide) {
+        padding-top: 10vh;
+        @include media($height-hd) {
+          padding-top: 20vh;
+        }
+      }
+      //Give some space when widescreen
+      @include media($desktop-wide) {
+        padding-top: 10vh;
+        //With lots of pixels, this will come in handy
+        @include media($height-hd) {
+          padding-top: 25vh;
+        }
+      }
+      //Extreme cases
+      @include media($height-small) {
+        float: left;
+        padding-top: 35vh;
+        width: 50vw;
+        @include media($mobile) {
+          padding-top: 3vh;
+        }
+        @include media($mobile-wide) {
+         padding-top: 3vh;
+        }
+        @include media($tablet) {
+          padding-top: 3vh;
+        }
       }
     }
-}
+  }
 
-// .banner-info {
-//   @include media($height-small) {
-//     width: 50vw;
-//     float: left;
-//   }
-//   h2 {
-//     font-size: 4vw;
-//     @include media($mobile) {
-//       margin: 5vh 0;
-//     }
-//     @include media($height-small) {
-//       font-size: 1em;
-//     }
-//     @include media($desktop) {
-//       font-size: 1.50em;
-//       margin-top: 10vh;
-//       @include media($height-special-case) {
-//         font-size: 1em;
-//         margin-top: 5vh;
-//       }
-//     }
-//   }
-// }
+  .collaboration {
+      width: 100vw;
+      display: inline-block;
+      //fix so it's not center on desktops
+      @include media($desktop) {
+        padding-left: 30vw;
+      }
+      @include media($height-small) {
+        float: right;
+        padding-top: 30vh;
+        padding-left: 0;
+        width: 50vw;
+        @include media($mobile) {
+         padding-top: 20vh;
+        }
+        @include media($mobile-wide) {
+         padding-top: 20vh;
+        }
+        @include media($tablet) {
+         padding-top: 20vh;
+        }
+        @include media($desktop-wide) {
+          padding-top: 20vh;
+        }
+      }
 
-.header-info {
-  @include media($height-small) {
-    width: 50vw;
-    float: left;
+      //"in collaboration with - "
+      h2 {
+        display: inline-block;
+        font-size: 4vw;
+        //make sure size not too small on small screen
+        @include media($mobile) {
+          font-size: 4vw;
+        }
+        @include media($desktop) {
+          font-size: 1.5vw;
+        }
+        //Remove margin in extreme case
+        @include media($height-small) {
+          font-size: 5vmin;
+          vertical-align: middle;
+        }
+      }
+      //Spotify logo
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        width: 20vw;
+        @include media($mobile) {
+          width: 30vw;
+        }
+        @include media($desktop) {
+          width: 200px;
+        }
+      }
   }
-  font-size: 4vw;
-  @include media($mobile) {
-    margin: 5vh 0;
+
+  // .banner-info {
+  //   @include media($height-small) {
+  //     width: 50vw;
+  //     float: left;
+  //   }
+  //   h2 {
+  //     font-size: 4vw;
+  //     @include media($mobile) {
+  //       margin: 5vh 0;
+  //     }
+  //     @include media($height-small) {
+  //       font-size: 1em;
+  //     }
+  //     @include media($desktop) {
+  //       font-size: 1.50em;
+  //       margin-top: 10vh;
+  //       @include media($height-special-case) {
+  //         font-size: 1em;
+  //         margin-top: 5vh;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .header-info {
+    @include media($height-small) {
+      width: 50vw;
+      float: left;
+    }
+    font-size: 4vw;
+    @include media($mobile) {
+      margin: 5vh 0;
+    }
+    @include media($height-small) {
+      font-size: 1em;
+    }
+    @include media($desktop) {
+      font-size: 1.50em;
+      margin-top: 10vh;
+      @include media($height-special-case) {
+        font-size: 1em;
+        margin-top: 5vh;
+      }
+    }
   }
-  @include media($height-small) {
-    font-size: 1em;
-  }
-  @include media($desktop) {
-    font-size: 1.50em;
-    margin-top: 10vh;
+
+  .ghost-btn {
+    outline: none;
     @include media($height-special-case) {
       font-size: 1em;
-      margin-top: 5vh;
+      padding: 15px 30px;
     }
-  }
-}
-
-.apply-button {
-  outline: none;
-  @include media($height-special-case) {
-    font-size: 1em;
-    padding: 15px 30px;
-  }
-  @include media($height-small) {
-    font-size: 1em;
-    padding: 15px 30px;
-  }
-  @include media($desktop-wide) {
-    @include media($height-hd) {
-      padding: 30px 60px;
-      font-size: 2em;
-      margin-top: 2vh;
-    }
-  }
-}
-
-.arrow-down {
-  cursor: default;
-  outline: none;
-  width: 100vw;
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  display: block;
-  background-color: rgba(0,0,0,0);
-  border: 0;
-  img {
-    cursor: pointer;
-    width: 60px;
-    padding: 0 20px 1vh 20px;
-    @include media($height-hd) {
-        padding-bottom: 3vh;
+    @include media($height-small) {
+      font-size: 1em;
+      padding: 15px 30px;
     }
     @include media($desktop-wide) {
-      @include media($height-hd2) {
-        width: 70px;
+      @include media($height-hd) {
+        padding: 30px 60px;
+        font-size: 2em;
+        margin-top: 2vh;
+      }
+    }
+  }
+
+  .arrow-down {
+    cursor: default;
+    outline: none;
+    width: 100vw;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    img {
+      cursor: pointer;
+      width: 60px;
+      padding: 0 20px 1vh 20px;
+      @include media($height-hd) {
+          padding-bottom: 3vh;
+      }
+      @include media($desktop-wide) {
+        @include media($height-hd2) {
+          width: 70px;
+        }
       }
     }
   }
