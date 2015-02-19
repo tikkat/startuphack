@@ -1,0 +1,22 @@
+.the-day {
+  background: linear-gradient(
+  rgba(0, 0, 0, 0.15),
+  rgba(0, 0, 0, 0.0)
+  ), url(/build/images/the-day.jpg) no-repeat;
+  min-height: 100vh;
+  /* height: 100vh; */
+  background-size: cover;
+  background-position: center center;
+
+  h1{
+    color: white;
+    padding: 1em;
+  }
+
+  button {
+    
+    top: 50%;
+    left: 50%;
+
+  }
+}

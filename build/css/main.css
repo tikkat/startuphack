@@ -751,6 +751,20 @@ a {
   width: 100vw;
   height: 35vh; }
 
+.the-day {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.15), transparent), url(/build/images/the-day.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), transparent), url(/build/images/the-day.jpg) no-repeat;
+  min-height: 100vh;
+  /* height: 100vh; */
+  background-size: cover;
+  background-position: center center; }
+  .the-day h1 {
+    color: white;
+    padding: 1em; }
+  .the-day button {
+    top: 50%;
+    left: 50%; }
+
 .apply-button {
   background-color: rgba(255, 255, 255, 0);
   border: 3px solid white;
