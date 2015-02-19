@@ -722,7 +722,8 @@ clearfix
 */
 html {
   background-color: #fdfdfd;
-  color: #424242; }
+  color: #424242;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
   text-decoration: none;
@@ -763,9 +764,9 @@ a {
     color: white;
     padding: 1em; }
   .the-day .ghost-btn {
-    font-size: 1em;
+    font-weight: 700;
     margin: 0 1em 0 1em;
-    width: 10em; }
+    width: 16em; }
 
 .ghost-btn {
   background-color: rgba(255, 255, 255, 0);
@@ -811,7 +812,6 @@ h4 {
 
 p {
   font-size: 20px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   text-align: center;
   line-height: 170%;
