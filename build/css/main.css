@@ -927,7 +927,7 @@ p {
           padding-top: 10vh; } }
   @media screen and (min-width: 1280px) and (min-height: 800px) {
     [role="banner"] .header-text em {
-      padding-top: 25vh; } }
+      padding-top: 20vh; } }
 
       @media screen and (max-height: 420px) {
         [role="banner"] .header-text em {
@@ -1008,7 +1008,7 @@ p {
     @media screen and (min-width: 850px) {
       [role="banner"] .header-info {
         font-size: 1.50em;
-        margin-top: 10vh; } }
+        margin-top: 4vh; } }
   @media screen and (min-width: 850px) and (max-height: 570px) {
     [role="banner"] .header-info {
       font-size: 1em;
@@ -1066,10 +1066,16 @@ footer {
   text-align: center; }
 
 .last-year h1 {
-  width: 100%;
+  width: 100vw;
   padding: 1em 10%;
   font-size: 3em;
+  margin-bottom: 0;
   background-color: #424242;
   color: #fdfdfd; }
-.last-year img {
-  width: 12.5vw; }
+.last-year .image-holder {
+  width: 100vw;
+  overflow: hidden; }
+  .last-year .image-holder img {
+    float: left;
+    width: 12.5vw;
+    min-height: 700px; }
