@@ -1,12 +1,21 @@
 .last-year {
 	h1 {
-		width: 100%;
+		width: 100vw;
 		padding: 1em 10%;
 		font-size: 3em;
+		margin-bottom: 0;
 		background-color: $base-dark-background-color;
 		color: $header-light-color;
 	}
-	img {
-		width: 12.5vw;
+	
+
+	.image-holder {
+		width: 100vw;
+		overflow: hidden;
+		img {
+			float: left;
+			width: 12.5vw;
+			min-height: 700px;
+		}
 	}
 }
