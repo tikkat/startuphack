@@ -89,7 +89,7 @@
          font-size: 1.2vw;
         }
       }
-      //width: 100vw;
+
       padding-top: 20vh;
       //Change padding on small width
       @include media($mobile) {
@@ -109,7 +109,7 @@
         padding-top: 10vh;
         //With lots of pixels, this will come in handy
         @include media($height-hd) {
-          padding-top: 25vh;
+          padding-top: 20vh;
         }
       }
       //Extreme cases
@@ -226,7 +226,7 @@
     }
     @include media($desktop) {
       font-size: 1.50em;
-      margin-top: 10vh;
+      margin-top: 4vh;
       @include media($height-special-case) {
         font-size: 1em;
         margin-top: 5vh;
