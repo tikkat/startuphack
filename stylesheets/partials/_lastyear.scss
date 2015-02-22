@@ -22,42 +22,50 @@
 		}
 	}
 	.statistics {
+		background-image: url("../../build/images/startuphack-counter-background.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 		width: 100vw;
+		float: left;
 		h3 {
+			margin-top: 8vh;
 			float: left;
 			width: 25vw;
-			font-size: 10vw;
+			font-size: 7vw;
 			margin-bottom: 0;
 			&:nth-child(1) {
-				color: #790528;
+				color: #7AB317;
 			}
 			&:nth-child(2) {
-				color: #790528;
+				color: #0D6759;
 			}
 			&:nth-child(3) {
-				color: #790528;
+				color: #0B2E59;
 			}
 			&:nth-child(4) {
-				color: #790528;
+				color: #2A044A;
 			}
 		}
 		h4 {
 			float: left;
 			width: 25vw;
-			font-size: 2vw;
+			font-size: 1.5vw;
 			padding-bottom: 1em;
-			&:nth-child(5) {
-				color: #790528;
-			}
-			&:nth-child(6) {
-				color: #790528;
-			}
-			&:nth-child(7) {
-				color: #790528;
-			}
-			&:nth-child(8) {
-				color: #790528;
-			}
+			margin-bottom: 8vh;
+			color: $header-light-color;
+			// &:nth-child(5) {
+			// 	color: #790528;
+			// }
+			// &:nth-child(6) {
+			// 	color: #055928;
+			// }
+			// &:nth-child(7) {
+			// 	color: #052859;
+			// }
+			// &:nth-child(8) {
+			// 	color: #BE8514;
+			// }
 		}
 	}
 }

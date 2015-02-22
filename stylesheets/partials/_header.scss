@@ -44,6 +44,7 @@
       float: left;
       padding-top: 35vh;
       width: 50vw;
+      height: 100vh;
       @include media($mobile) {
         padding-top: 20vh;
       }
@@ -63,7 +64,7 @@
         font-size: 8vw;
       }
       @include media($desktop-wide) {
-        font-size: 20vmin;
+        font-size: 15vmin;
       }
     }
 
@@ -104,9 +105,15 @@
           padding-top: 20vh;
         }
       }
+      @include media($desktop) {
+        padding-top: 20vh;
+        @include media($height-special-case) {
+         padding-top: 10vh;
+        }
+      }
       //Give some space when widescreen
       @include media($desktop-wide) {
-        padding-top: 10vh;
+        padding-top: 15vh;
         //With lots of pixels, this will come in handy
         @include media($height-hd) {
           padding-top: 20vh;

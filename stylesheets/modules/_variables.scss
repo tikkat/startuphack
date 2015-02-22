@@ -26,6 +26,6 @@ $desktop:         new-breakpoint(min-width 850px);
 $desktop-wide:    new-breakpoint(min-width 1280px);
 
 $height-small:    new-breakpoint(max-height 420px);
-$height-special-case: new-breakpoint(max-height 570px);
+$height-special-case: new-breakpoint(max-height 600px);
 $height-hd:       new-breakpoint(min-height 800px);
 $height-hd2:       new-breakpoint(min-height 900px);
