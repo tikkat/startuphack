@@ -11,9 +11,11 @@ Vertical align
 clearfix
 */
 @mixin clearfix {
-  &:after {
+  &:before, &:after {
     content: "";
     display: table;
+  }
+  &:after {
     clear: both;
   }
 }

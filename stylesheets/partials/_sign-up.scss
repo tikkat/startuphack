@@ -1,0 +1,39 @@
+.sign-up {
+	background-color: $base-dark-background-color;
+	width: 100vw;
+	text-align: center;
+	h1 {
+		color: $header-light-color;
+		margin: 0;
+		padding: 1.8em 1em;
+	}
+	h1:hover {
+		animation: heartbeat 1.3s linear infinite;
+	}
+	img {
+		margin-left: 5em;
+		transform: rotate(-90deg);
+	}
+	* {
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+@keyframes heartbeat {
+    10% {
+    	transform: scale(1.2, 1.2);
+    }
+
+    30% {
+    	transform: scale(1.05, 1.05);
+    }
+
+    40% {
+    	transform: scale(1.2, 1.2);
+    }
+
+    70% {
+    	transform: scale(1, 1);
+    }
+}

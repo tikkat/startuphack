@@ -6,6 +6,9 @@
 		margin: 0;
 		background-color: $base-dark-background-color;
 		color: $header-light-color;
+		@include media($mobile) {
+			font-size: 2em;
+		}
 	}
 	h2 {
 		float: left;
@@ -34,6 +37,7 @@
 			width: 25vw;
 			font-size: 7vw;
 			margin-bottom: 0;
+			//Color palette: Hymn_For_My_Soul
 			&:nth-child(1) {
 				color: #7AB317;
 			}

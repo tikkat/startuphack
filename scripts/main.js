@@ -13,20 +13,45 @@ function isScrolledIntoView(elem) {
 
 var stats;
 $(document).ready(function() {
+	//Get all stats for last year section
 	stats = $('.statistics > h3');
+	//Don't show last four pictures in last year section on mobile
+	var pics = $('.last-year > img');
+	if(window.innerWidth <= 480) {
+		for(var i = 4; i < pics.length; i++) {
+			pics[i].style.display = 'none';
+		}
+	}
+	//scroll down on header-arrow click
 	$('.arrow-down img').click(function() {
 	    $('html, body').animate({
 	        scrollTop: $('.intro').offset().top
 	    }, 1000);
 	});
 
-  $('.the-day .ghost-btn').click(function(){
+	//change between hack and open track
+  	$('.the-day .ghost-btn').click(function(){
 		if($(this).hasClass('active'))
 			return;
 		else
 			$('.the-day .ghost-btn').each(function () {
 				$(this).toggleClass('active');
 		});
+	});
+
+  	//Don't show last four pictures in last year section on resize to small
+	$(window).resize(function() {
+		if (window.innerWidth <= 480 && pics[4].style.display != 'none') {
+			for(var i = 4; i < pics.length; i++) {
+				pics[i].style.display = 'none';
+			}
+		}
+		//show them again if bigger screen
+		else if (window.innerWidth > 480 && pics[4].style.display == 'none') {
+			for(var i = 4; i < pics.length; i++) {
+				pics[i].style.display = 'inline';
+			}
+		}
 	});
 });
 
@@ -50,7 +75,7 @@ $(document).on('scroll', function() {
 				}
 				i = i+2;
 				if (i<300) countStats(i);
-		   	}, 20)
+		   	}, 30)
 		})(0);  
 	}
 });
