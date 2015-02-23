@@ -43,7 +43,7 @@ $(document).on('scroll', function() {
 				}
 				i = i+2;
 				if (i<300) countStats(i);
-		   	}, 10)
+		   	}, 20)
 		})(0);  
 	}
 })
