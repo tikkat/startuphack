@@ -9,7 +9,7 @@ function isScrolledIntoView(elem) {
     var elemBottom = elemTop + $elem.height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-} 
+}
 
 var stats;
 $(document).ready(function() {
@@ -19,15 +19,22 @@ $(document).ready(function() {
 	        scrollTop: $('.intro').offset().top
 	    }, 1000);
 	});
+
+  $('.the-day .ghost-btn').click(function(){
+		if($(this).hasClass('active'))
+			return;
+		else
+			$('.the-day .ghost-btn').each(function () {
+				$(this).toggleClass('active');
+		});
+	});
 });
 
-
 var statsDone = false;
-console.log(stats);
 $(document).on('scroll', function() {
 	if (isScrolledIntoView('.statistics') && !statsDone) {
 		(function countStats(i) {
-			statsDone = true;         
+			statsDone = true;
 			setTimeout(function () {
 		   		if (i<27) {
 					stats[0].innerHTML=i+1;
@@ -46,4 +53,4 @@ $(document).on('scroll', function() {
 		   	}, 20)
 		})(0);  
 	}
-})
+});
