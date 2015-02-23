@@ -19,6 +19,7 @@ $(document).ready(function() {
 	        scrollTop: $('.intro').offset().top
 	    }, 1000);
 	});
+<<<<<<< Updated upstream
 });
 
 
@@ -47,3 +48,15 @@ $(document).on('scroll', function() {
 		})(0);  
 	}
 })
+=======
+
+	$('.the-day .ghost-btn').click(function(){
+		if($(this).hasClass('active'))
+			return;
+		else
+			$('.the-day .ghost-btn').each(function () {
+				$(this).toggleClass('active');
+		});
+	});
+});
+>>>>>>> Stashed changes

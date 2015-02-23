@@ -2,3 +2,7 @@ node_modules
 .DS_Store
 .sass-cache
 build/css
+
+build/css/main.min.css
+
+build/css/main.css
