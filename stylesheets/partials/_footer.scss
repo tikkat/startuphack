@@ -8,7 +8,7 @@ footer {
     display: block;
     content: "";
     border-top: 1px solid #e2e2e2;
-    margin: 1.46667em auto;
+    margin: 4em auto;
     max-width: 10em;
     width: 50%;
   }
@@ -17,4 +17,6 @@ footer {
     font-size: $footer-font-size;
     text-align: center;
   }
+
+  padding-bottom: 4em;
 }

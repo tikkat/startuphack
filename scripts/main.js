@@ -29,14 +29,20 @@ $(document).ready(function() {
 	    }, 1000);
 	});
 
+<<<<<<< Updated upstream
 	//change between hack and open track
   	$('.the-day .ghost-btn').click(function(){
+=======
+  // When clicking on the buttons in the the-day section
+  $('.the-day .ghost-btn').click(function(){
+>>>>>>> Stashed changes
 		if($(this).hasClass('active'))
 			return;
-		else
+		else {
 			$('.the-day .ghost-btn').each(function () {
 				$(this).toggleClass('active');
-		});
+		  });
+    }
 	});
 
   	//Don't show last four pictures in last year section on resize to small

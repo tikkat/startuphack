@@ -730,6 +730,20 @@ a {
   color: #428bca;
   font-weight: 600; }
 
+.ghost-btn {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 25px 50px;
+  font-size: 1.3em;
+  color: #fff;
+  white-space: nowrap; }
+  @media screen and (max-width: 480px) {
+    .ghost-btn {
+      padding: 20px 40px;
+      font-size: 1.5em; } }
+
 .intro h1 {
   padding-top: 1em;
   text-decoration: none; }
@@ -750,42 +764,39 @@ a {
   background: #000 url(/build/images/ocean.png) no-repeat;
   background-position: center -200px;
   width: 100vw;
-  height: 35vh; }
+  height: 35vh;
+  overflow: hidden; }
+  .ocean-break img {
+    position: relative;
+    left: 0px;
+    height: 35vh;
+    padding: 5vh 0; }
 
 .the-day {
+  color: white;
   text-align: center;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.15), transparent), url(/build/images/the-day.jpg) no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), transparent), url(/build/images/the-day.jpg) no-repeat;
-  min-height: 100vh;
-  /* height: 100vh; */
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(/build/images/the-day.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(/build/images/the-day.jpg) no-repeat;
+  width: 100vw;
   background-size: cover;
   background-position: center center; }
   .the-day h1 {
-    color: white;
-    padding: 1em; }
+    margin-top: 0;
+    padding-top: 1em; }
+  .the-day .btn-group {
+    min-width: 80%; }
   .the-day .ghost-btn {
-    font-weight: 700;
     margin: 0 1em 0 1em;
     width: 16em; }
-
-.ghost-btn {
-  background-color: rgba(255, 255, 255, 0);
-  border: 3px solid white;
-  border-radius: 10px;
-  padding: 25px 50px;
-  font-size: 1.3em;
-  color: #fff;
-  white-space: nowrap; }
-  @media screen and (max-width: 480px) {
-    .ghost-btn {
-      padding: 20px 40px;
-      font-size: 1.5em; } }
-
-.ghost-btn:hover {
-  -webkit-transition: 0.5s;
-          transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.04); }
+  .the-day .active {
+    -webkit-transition: 0.5s;
+            transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.04); }
+  .the-day p {
+    margin-top: 3em;
+    margin-bottom: 0;
+    padding-bottom: 5em; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -831,9 +842,10 @@ p {
   text-align: center;
   overflow: hidden;
   color: #fff; }
-  [role="banner"]:after {
+  [role="banner"]:before, [role="banner"]:after {
     content: "";
-    display: table;
+    display: table; }
+  [role="banner"]:after {
     clear: both; }
   [role="banner"] .header-text {
     text-align: center;
@@ -858,7 +870,8 @@ p {
         font-size: 10vmin;
         float: left;
         padding-top: 35vh;
-        width: 50vw; } }
+        width: 50vw;
+        height: 100vh; } }
   @media screen and (max-height: 420px) and (max-width: 480px) {
     [role="banner"] .header-text {
       padding-top: 20vh; } }
@@ -869,18 +882,18 @@ p {
     [role="banner"] .header-text {
       padding-top: 20vh; } }
 
-    @media screen and (max-height: 570px) {
+    @media screen and (max-height: 600px) {
       [role="banner"] .header-text {
         font-size: 15vmin; } }
-  @media screen and (max-height: 570px) and (max-width: 480px) {
+  @media screen and (max-height: 600px) and (max-width: 480px) {
     [role="banner"] .header-text {
       font-size: 14vmin; } }
-  @media screen and (max-height: 570px) and (min-width: 850px) {
+  @media screen and (max-height: 600px) and (min-width: 850px) {
     [role="banner"] .header-text {
       font-size: 8vw; } }
-  @media screen and (max-height: 570px) and (min-width: 1280px) {
+  @media screen and (max-height: 600px) and (min-width: 1280px) {
     [role="banner"] .header-text {
-      font-size: 20vmin; } }
+      font-size: 15vmin; } }
 
     [role="banner"] .header-text em {
       font-style: normal;
@@ -901,10 +914,10 @@ p {
     [role="banner"] .header-text em {
       font-size: 7vmin; } }
 
-      @media screen and (max-height: 570px) {
+      @media screen and (max-height: 600px) {
         [role="banner"] .header-text em {
           font-size: 3vmin; } }
-  @media screen and (max-height: 570px) and (min-width: 850px) {
+  @media screen and (max-height: 600px) and (min-width: 850px) {
     [role="banner"] .header-text em {
       font-size: 1.2vw; } }
 
@@ -922,9 +935,16 @@ p {
     [role="banner"] .header-text em {
       padding-top: 20vh; } }
 
+      @media screen and (min-width: 850px) {
+        [role="banner"] .header-text em {
+          padding-top: 20vh; } }
+  @media screen and (min-width: 850px) and (max-height: 600px) {
+    [role="banner"] .header-text em {
+      padding-top: 10vh; } }
+
       @media screen and (min-width: 1280px) {
         [role="banner"] .header-text em {
-          padding-top: 10vh; } }
+          padding-top: 15vh; } }
   @media screen and (min-width: 1280px) and (min-height: 800px) {
     [role="banner"] .header-text em {
       padding-top: 20vh; } }
@@ -1009,27 +1029,30 @@ p {
       [role="banner"] .header-info {
         font-size: 1.50em;
         margin-top: 4vh; } }
-  @media screen and (min-width: 850px) and (max-height: 570px) {
+  @media screen and (min-width: 850px) and (max-height: 600px) {
     [role="banner"] .header-info {
       font-size: 1em;
       margin-top: 5vh; } }
 
-  [role="banner"] .ghost-btn {
-    outline: none; }
-    @media screen and (max-height: 570px) {
-      [role="banner"] .ghost-btn {
-        font-size: 1em;
-        padding: 15px 30px; } }
-    @media screen and (max-height: 420px) {
-      [role="banner"] .ghost-btn {
-        font-size: 1em;
-        padding: 15px 30px; } }
+  @media screen and (max-height: 600px) {
+    [role="banner"] .ghost-btn {
+      font-size: 1em;
+      padding: 15px 30px; } }
+  @media screen and (max-height: 420px) {
+    [role="banner"] .ghost-btn {
+      font-size: 1em;
+      padding: 15px 30px; } }
 @media screen and (min-width: 1280px) and (min-height: 800px) {
   [role="banner"] .ghost-btn {
     padding: 30px 60px;
     font-size: 2em;
     margin-top: 2vh; } }
 
+  [role="banner"] .ghost-btn:hover {
+    -webkit-transition: 0.5s;
+            transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.04); }
   [role="banner"] .arrow-down {
     cursor: default;
     outline: none;
@@ -1054,28 +1077,71 @@ p {
 footer {
   margin: 0; }
 
-.info-footer .line {
-  display: block;
-  content: "";
-  border-top: 1px solid #e2e2e2;
-  margin: 1.46667em auto;
-  max-width: 10em;
-  width: 50%; }
-.info-footer p {
-  font-size: 16px;
-  text-align: center; }
+.info-footer {
+  padding-bottom: 4em; }
+  .info-footer .line {
+    display: block;
+    content: "";
+    border-top: 1px solid #e2e2e2;
+    margin: 4em auto;
+    max-width: 10em;
+    width: 50%; }
+  .info-footer p {
+    font-size: 16px;
+    text-align: center; }
 
-.last-year h1 {
+.last-year h1, .last-year h2 {
   width: 100vw;
   padding: 1em 10%;
   font-size: 3em;
-  margin-bottom: 0;
+  margin: 0;
   background-color: #424242;
   color: #fdfdfd; }
-.last-year .image-holder {
+  @media screen and (max-width: 480px) {
+    .last-year h1, .last-year h2 {
+      font-size: 2em; } }
+.last-year h2 {
+  float: left;
+  padding: 1.2em 10%; }
+.last-year img {
+  float: left;
+  width: 50vw; }
+  @media screen and (max-width: 480px) {
+    .last-year img {
+      width: 50vw; } }
+  @media screen and (min-width: 850px) {
+    .last-year img {
+      width: 25vw; } }
+.last-year .statistics {
+  background-image: url("../../build/images/startuphack-counter-background.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   width: 100vw;
-  overflow: hidden; }
-  .last-year .image-holder img {
+  float: left; }
+  .last-year .statistics h3 {
+    margin-top: 8vh;
     float: left;
-    width: 12.5vw;
-    min-height: 700px; }
+    width: 25vw;
+    font-size: 7vw;
+    margin-bottom: 0; }
+    .last-year .statistics h3:nth-child(1) {
+      color: #7AB317; }
+    .last-year .statistics h3:nth-child(2) {
+      color: #0D6759; }
+    .last-year .statistics h3:nth-child(3) {
+      color: #0B2E59; }
+    .last-year .statistics h3:nth-child(4) {
+      color: #2A044A; }
+  .last-year .statistics h4 {
+    float: left;
+    width: 25vw;
+    font-size: 1.5vw;
+    padding-bottom: 1em;
+    margin-bottom: 8vh;
+    color: #fdfdfd; }
+
+.last-year:after {
+  content: '';
+  display: block;
+  clear: both; }

@@ -242,6 +242,7 @@
   }
 
   .ghost-btn {
+
     @include media($height-special-case) {
       font-size: 1em;
       padding: 15px 30px;
@@ -257,6 +258,8 @@
         margin-top: 2vh;
       }
     }
+
+    &:hover { @include hover; }
   }
 
   .arrow-down {
