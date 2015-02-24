@@ -1,0 +1,18 @@
+.location {
+	background-image: url("../../build/images/header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100vw;
+	height: auto;
+	display: inline-block;
+
+	.location-left {
+		@include clearfix;
+		width: 50vw;
+		float: right;
+		color: $header-light-color;
+		margin: 5em;
+		background-color: rgba(0,0,0,0.4);
+	}
+}

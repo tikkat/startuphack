@@ -61,9 +61,8 @@ $(document).ready(function() {
  
    	function parallaxScroll(){
    		yStart = $('.ocean-break').offset().top - $(window).scrollTop();
-   		var scrolledY = window.innerHeight - yStart;
-   		console.log(scrolledY);
-		$('.ocean-break img').css('left', ((scrolledY)/10)+'vw');
+   		var scrolledY = window.innerHeight - yStart - (window.innerHeight/100)*35;
+		$('.ocean-break img').css('left', ((scrolledY)/7)+'vw');
    	}
 });
 

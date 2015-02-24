@@ -16,9 +16,6 @@
 			font-size: 5em;
 		}
 	}
-	h1:hover {
-		animation: heartbeat 1.3s linear infinite;
-	}
 	img {
 		width: 30px;
 		@include media($mobile) {
@@ -32,10 +29,17 @@
 		}
 		transform: rotate(-90deg);
 	}
-	* {
+	h1, img {
 		vertical-align: middle;
 		display: inline-block;
 	}
+	a {
+		display: block;
+	}
+}
+
+.sign-up:hover h1{
+	animation: heartbeat 1.3s linear infinite;
 }
 
 @keyframes heartbeat {
@@ -44,7 +48,7 @@
     }
 
     30% {
-    	transform: scale(1.05, 1.05);
+    	transform: scale(1.15, 1.15);
     }
 
     40% {
