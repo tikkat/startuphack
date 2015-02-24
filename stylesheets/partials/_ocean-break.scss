@@ -3,4 +3,11 @@
   background-position: center -200px;
   width: 100vw;
   height: 35vh;
+  overflow: hidden;
+  img {
+  	position: relative;
+  	left: 0px;
+  	height: 35vh;
+  	padding: 5vh 0;
+  }
 }

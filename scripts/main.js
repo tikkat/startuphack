@@ -53,6 +53,18 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	//pirallax
+	$(window).bind('scroll',function(e){
+   		parallaxScroll();
+   	});
+ 
+   	function parallaxScroll(){
+   		yStart = $('.ocean-break').offset().top - $(window).scrollTop();
+   		var scrolledY = window.innerHeight - yStart;
+   		console.log(scrolledY);
+		$('.ocean-break img').css('left', ((scrolledY)/10)+'vw');
+   	}
 });
 
 var statsDone = false;
@@ -78,4 +90,9 @@ $(document).on('scroll', function() {
 		   	}, 30)
 		})(0);  
 	}
+	// if (isScrolledIntoView('.ocean-break')) {
+	// 	console.log($('.ocean-break img'));
+	// 	$('.ocean-break img').animate({left: '+=150px'});
+	// };
+
 });

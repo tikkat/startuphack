@@ -6,12 +6,30 @@
 		color: $header-light-color;
 		margin: 0;
 		padding: 1.8em 1em;
+		@include media($mobile) {
+			font-size: 2em;
+		}
+		@include media($mobile-wide) {
+			font-size: 3em;
+		}
+		@include media($tablet) {
+			font-size: 5em;
+		}
 	}
 	h1:hover {
 		animation: heartbeat 1.3s linear infinite;
 	}
 	img {
-		margin-left: 5em;
+		width: 30px;
+		@include media($mobile) {
+			margin-left: 1em;
+		}
+		@include media($mobile-wide) {
+			margin-left: 1em;
+		}
+		@include media($tablet) {
+			margin-left: 5em;
+		}
 		transform: rotate(-90deg);
 	}
 	* {
