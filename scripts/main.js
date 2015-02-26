@@ -100,12 +100,14 @@ $(document).ready(function() {
    	});
 
 	//change between hack and open track
-  	$('.the-day .ghost-btn').click(function(){
-		if($(this).hasClass('active'))
+  	$('.the-day .ghost-btn').click(function() {
+		if($(this).hasClass('active')) {
 			return;
+		}
 		else {
 			$('.the-day .ghost-btn').each(function () {
-			$(this).toggleClass('active');
+				$(this).toggleClass('active');
+			});
 		}
 	});
 
