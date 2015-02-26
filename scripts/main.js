@@ -156,11 +156,12 @@ $(document).on('scroll', function() {
 				if (i<1) {
 					stats[2].innerHTML=i+1;
 				}
-				if (i<300) {
-					stats[3].innerHTML=i+2;
+				if (i<1014) {
+					stats[3].innerHTML=i+6;
 				}
-				i = i+2;
-				if (i<300) countStats(i);
+				i = ((i <= 127) ? i+2 : i+80);
+				// i = i+2;
+				if (i<1014) countStats(i);
 		   	}, 30)
 		})(0);  
 	}
