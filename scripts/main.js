@@ -11,6 +11,44 @@ function isScrolledIntoView(elem) {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
+function setSpanArrow(elem) {
+	if (elem.parent().css('float') == 'right') {
+		elem.addClass('span-left');
+		elem.removeClass('span-right');
+	}
+	if (elem.parent().css('float') == 'left') {
+		elem.addClass('span-right');
+		elem.removeClass('span-left');
+	}
+}
+
+function fixFloat(elem) {
+	elem[0].getElementsByClassName('people-text')[0].style.cssFloat = 'right';
+	elem[0].getElementsByClassName('people-picture')[0].style.cssFloat = 'left';
+
+	for(var i = 1; i<elem.length; i++) {
+		var textOneMinus = elem[i-1].getElementsByClassName('people-text')[0];
+		var pictureOneMinus = elem[i-1].getElementsByClassName('people-picture')[0];
+		var text = elem[i].getElementsByClassName('people-text')[0];
+		var picture = elem[i].getElementsByClassName('people-picture')[0];
+
+		if (elem[i-1].offsetTop != elem[i].offsetTop) {
+			if (textOneMinus.style.cssFloat == 'right') {
+				text.style.cssFloat = 'left';
+				picture.style.cssFloat = 'right';
+			}
+			if (textOneMinus.style.cssFloat == 'left') {
+				text.style.cssFloat = 'right';
+				picture.style.cssFloat = 'left';
+			}
+		}
+		else {
+			text.style.cssFloat = textOneMinus.style.cssFloat;
+			picture.style.cssFloat = pictureOneMinus.style.cssFloat;
+		}
+	}
+}
+
 var stats;
 $(document).ready(function() {
 	//Get all stats for last year section
@@ -29,12 +67,44 @@ $(document).ready(function() {
 	    }, 1000);
 	});
 
+	//pirallax
+	$(window).bind('scroll',function(e){
+   		parallaxScroll();
+   	});
+ 
+   	function parallaxScroll(){
+   		yStart = $('.ocean-break').offset().top - $(window).scrollTop();
+   		var scrolledY = window.innerHeight - yStart - (window.innerHeight/100)*35;
+		$('.ocean-break img').css('left', ((scrolledY)/7)+'vw');
+   	}
+
+   	var clicksOnPirate = 0;
+   	var start = 0;
+   	$('.ocean-break img').on('click', function() {
+   		clicksOnPirate++;
+   		if (clicksOnPirate == 2) {
+   			var scaleVal, x, y;
+   			scaleVal = x = y = 0;
+   			$(this).animate({borderSpacing: -720*2}, {
+			    step: function(now,fx) {
+			    	console.log();
+					$(this).css('-webkit-transform','rotate('+now+'deg)'); 
+					$(this).css('-moz-transform','rotate('+now+'deg)');
+					$(this).css('transform','rotate('+now+'deg)');
+			    },
+			    queue: false,
+			    duration: 1000
+			}, 'linear');
+			clicksOnPirate = 0;
+   		}
+   	});
+
 	//change between hack and open track
   	$('.the-day .ghost-btn').click(function(){
 		if($(this).hasClass('active'))
 			return;
 		else
-			$('.the-day .ghost-btn').each(function () {
+			$('.the-day .ghost-btn').each(function() {
 				$(this).toggleClass('active');
 		});
 	});
@@ -54,16 +124,19 @@ $(document).ready(function() {
 		}
 	});
 
-	//pirallax
-	$(window).bind('scroll',function(e){
-   		parallaxScroll();
-   	});
- 
-   	function parallaxScroll(){
-   		yStart = $('.ocean-break').offset().top - $(window).scrollTop();
-   		var scrolledY = window.innerHeight - yStart - (window.innerHeight/100)*35;
-		$('.ocean-break img').css('left', ((scrolledY)/7)+'vw');
-   	}
+	//fix span arrow and float in crew
+	var peoples = $('.people');
+	fixFloat(peoples);
+	$('.people span').each(function() {
+		setSpanArrow($(this));
+	});
+	$(window).on('resize', function() {
+		fixFloat(peoples);
+		$('.people span').each(function() {
+			setSpanArrow($(this));
+		});
+	});
+
 });
 
 var statsDone = false;
@@ -89,9 +162,4 @@ $(document).on('scroll', function() {
 		   	}, 30)
 		})(0);  
 	}
-	// if (isScrolledIntoView('.ocean-break')) {
-	// 	console.log($('.ocean-break img'));
-	// 	$('.ocean-break img').animate({left: '+=150px'});
-	// };
-
 });

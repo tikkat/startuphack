@@ -1,9 +1,11 @@
 .sign-up {
-	background-color: $base-dark-background-color;
+	background-color: $base-background-color;
 	width: 100vw;
 	text-align: center;
 	h1 {
-		color: $header-light-color;
+		vertical-align: middle;
+		display: inline-block;
+		color: $base-text-color;
 		margin: 0;
 		padding: 1.8em 1em;
 		@include media($mobile) {
@@ -16,22 +18,21 @@
 			font-size: 5em;
 		}
 	}
-	img {
-		width: 30px;
-		@include media($mobile) {
-			margin-left: 1em;
-		}
-		@include media($mobile-wide) {
-			margin-left: 1em;
-		}
-		@include media($tablet) {
-			margin-left: 5em;
-		}
-		transform: rotate(-90deg);
-	}
-	h1, img {
+
+	.icon-arrow-down:before {
 		vertical-align: middle;
 		display: inline-block;
+		transform: rotate(-90deg);
+		color: #000;
+		@include media($mobile) {
+			font-size: 1em;
+		}
+		@include media($mobile-wide) {
+			font-size: 2em;
+		}
+		@include media($tablet) {
+			font-size: 3em;
+		}
 	}
 	a {
 		display: block;
@@ -39,23 +40,23 @@
 }
 
 .sign-up:hover h1{
-	animation: heartbeat 1.3s linear infinite;
+	animation: heartbeat 1.5s linear infinite;
 }
 
 @keyframes heartbeat {
-    10% {
-    	transform: scale(1.2, 1.2);
+    5% {
+    	transform: scale(1.02, 1.02);
     }
 
-    30% {
-    	transform: scale(1.15, 1.15);
+    15% {
+    	transform: scale(1.01, 1.01);
     }
 
-    40% {
-    	transform: scale(1.2, 1.2);
+    20% {
+    	transform: scale(1.02, 1.02);
     }
 
-    70% {
+    35% {
     	transform: scale(1, 1);
     }
 }

@@ -20,6 +20,7 @@ $lineheight:		       	($leading/$base-size) * 1em;
 
 // breakpoints
 $mobile:          new-breakpoint(max-width 480px);
+$people-extra:    new-breakpoint(max-width 600px);
 $mobile-wide:     new-breakpoint(min-width 481px);
 $tablet:          new-breakpoint(min-width 700px);
 $desktop:         new-breakpoint(min-width 850px);

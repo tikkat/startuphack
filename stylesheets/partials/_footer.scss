@@ -3,7 +3,7 @@ footer {
   margin: 0;
 }
 
-.info-footer {
+.standard-footer {
   .line {
     display: block;
     content: "";
@@ -16,5 +16,6 @@ footer {
   p {
     font-size: $footer-font-size;
     text-align: center;
+    font-size: 0.8em;
   }
 }

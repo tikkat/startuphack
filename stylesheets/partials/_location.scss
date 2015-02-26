@@ -9,10 +9,14 @@
 
 	.location-left {
 		@include clearfix;
-		width: 50vw;
+		width: 90vw;
+		margin: 5vw;
 		float: right;
 		color: $header-light-color;
-		margin: 5em;
 		background-color: rgba(0,0,0,0.4);
+		@include media($desktop) {
+			width: 40vw;
+			margin: 5vw;
+		}
 	}
 }
