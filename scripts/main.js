@@ -103,10 +103,10 @@ $(document).ready(function() {
   	$('.the-day .ghost-btn').click(function(){
 		if($(this).hasClass('active'))
 			return;
-		else
-			$('.the-day .ghost-btn').each(function() {
-				$(this).toggleClass('active');
-		});
+		else {
+			$('.the-day .ghost-btn').each(function () {
+			$(this).toggleClass('active');
+		}
 	});
 
   	//Don't show last four pictures in last year section on resize to small

@@ -5,8 +5,7 @@
   rgba(0, 0, 0, 0.1),
   rgba(0, 0, 0, 0.7)
   ), url(/build/images/the-day.jpg) no-repeat;
-  min-height: 100vh;
-  height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: center center;
 
@@ -25,11 +24,13 @@
   }
 
   .active {
-    @extend .ghost-btn:hover;
+    @include hover;
   }
 
   p {
     margin-top: 3em;
+    margin-bottom: 0;
+    padding-bottom: 5em;
   }
 
 
