@@ -1,4 +1,5 @@
 .crew {
+	margin-bottom: 100px;
 	.people-grid {
 		width: 100%;
 		margin: auto;
@@ -7,6 +8,7 @@
 	
 	.people {
 		display: inline-block;
+		vertical-align: top;
 		margin: 2% 1%;
 		width: 500px;
 		@include media($people-extra) {
@@ -140,6 +142,6 @@
 		transform: rotate(-1deg);
 		width: 50%;
 		position: relative;
-		top: 49%
+		top: 49%;
 	}
 }

@@ -1,8 +1,10 @@
 .ocean-break {
-  background: #000 url(/build/images/ocean.png) no-repeat;
-  background-position: center -200px;
+  background: #000 url(../../build/images/ocean-break-background.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
   width: 100vw;
   height: 35vh;
+  position: relative;
   overflow: hidden;
   img {
   	position: relative;

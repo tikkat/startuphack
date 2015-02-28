@@ -25,7 +25,8 @@
 		}
 	}
 	.statistics {
-		background-image: url("../../build/images/startuphack-counter-background.svg");
+		background-color: $base-dark-background-color;
+		background-image: url("../../build/images/statistics-background.svg");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;

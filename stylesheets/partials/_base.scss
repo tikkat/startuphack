@@ -4,10 +4,11 @@
 //Import everything from modules
 @import "../modules/all";
 
-html {
+html, body {
   background-color:  $base-background-color;
   color:             $base-text-color;
   font-family:       $default-font;
+  overflow-x: hidden;
 }
 
 a {

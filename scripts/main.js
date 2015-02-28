@@ -51,6 +51,38 @@ function fixFloat(elem) {
 
 var stats;
 $(document).ready(function() {
+	//animate header
+	$('header[role="banner"] > *').animate({
+		left: 0,
+		opacity: 1
+	}, 1000);
+	$('.collaboration > *').animate({
+		left: 0,
+		opacity: 1
+	}, 1000);
+	$('.ghost-btn').animate({
+		opacity: 1
+	}, 1500);
+	$('.header-info').animate({
+		opacity: 1
+	}, 1500);
+
+	//smooth scroll for a hrefs
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
+
 	//Get all stats for last year section
 	stats = $('.statistics > h3');
 	//Don't show last four pictures in last year section on mobile
@@ -60,12 +92,6 @@ $(document).ready(function() {
 			pics[i].style.display = 'none';
 		}
 	}
-	//scroll down on header-arrow click
-	$('.arrow-down img').click(function() {
-	    $('html, body').animate({
-	        scrollTop: $('.intro').offset().top
-	    }, 1000);
-	});
 
 	//pirallax
 	$(window).bind('scroll',function(e){
@@ -87,7 +113,6 @@ $(document).ready(function() {
    			scaleVal = x = y = 0;
    			$(this).animate({borderSpacing: -720*2}, {
 			    step: function(now,fx) {
-			    	console.log();
 					$(this).css('-webkit-transform','rotate('+now+'deg)'); 
 					$(this).css('-moz-transform','rotate('+now+'deg)');
 					$(this).css('transform','rotate('+now+'deg)');
@@ -99,12 +124,19 @@ $(document).ready(function() {
    		}
    	});
 
+   	//Both "the day" text at same place
+   	var text1y = $('.the-day-text:eq(0)').position().top;
+   	$('.the-day-text:eq(1)').css('top', text1y);
+
 	//change between hack and open track
   	$('.the-day .ghost-btn').click(function() {
 		if($(this).hasClass('active')) {
 			return;
 		}
 		else {
+			// $('.the-day').toggleClass('background-change');
+			$('.the-day>img').toggleClass('img-shown').toggleClass('img-not-shown');
+			$('.the-day-text').toggleClass('text-shown').toggleClass('text-not-shown');
 			$('.the-day .ghost-btn').each(function () {
 				$(this).toggleClass('active');
 			});
@@ -124,6 +156,37 @@ $(document).ready(function() {
 				pics[i].style.display = 'inline';
 			}
 		}
+
+		//Make sure "the day" texts end up on same place
+		var text1y = $('.the-day-text:eq(0)').position().top;
+		$('.the-day-text:eq(1)').css('top', text1y);
+	});
+	
+	//Count statistics
+	var statsDone = false;
+	$(document).on('scroll', function() {
+		if (isScrolledIntoView('.statistics') && !statsDone) {
+			(function countStats(i) {
+				statsDone = true;
+				setTimeout(function () {
+			   		if (i<27) {
+						stats[0].innerHTML=i+1;
+					}
+					if (i<127) {
+						stats[1].innerHTML=i+1;
+					}
+					if (i<1) {
+						stats[2].innerHTML=i+1;
+					}
+					if (i<1014) {
+						stats[3].innerHTML=i+6;
+					}
+					i = ((i <= 127) ? i+2 : i+80);
+					// i = i+2;
+					if (i<1014) countStats(i);
+			   	}, 30)
+			})(0);  
+		}
 	});
 
 	//fix span arrow and float in crew
@@ -141,28 +204,3 @@ $(document).ready(function() {
 
 });
 
-var statsDone = false;
-$(document).on('scroll', function() {
-	if (isScrolledIntoView('.statistics') && !statsDone) {
-		(function countStats(i) {
-			statsDone = true;
-			setTimeout(function () {
-		   		if (i<27) {
-					stats[0].innerHTML=i+1;
-				}
-				if (i<127) {
-					stats[1].innerHTML=i+1;
-				}
-				if (i<1) {
-					stats[2].innerHTML=i+1;
-				}
-				if (i<1014) {
-					stats[3].innerHTML=i+6;
-				}
-				i = ((i <= 127) ? i+2 : i+80);
-				// i = i+2;
-				if (i<1014) countStats(i);
-		   	}, 30)
-		})(0);  
-	}
-});

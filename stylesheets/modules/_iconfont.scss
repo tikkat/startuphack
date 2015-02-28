@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../../res/fonts/icomoon.eot?iyj5ao');
-	src:url('../../res/fonts/icomoon.eot?#iefixiyj5ao') format('embedded-opentype'),
-		url('../../res/fonts/icomoon.woff?iyj5ao') format('woff'),
-		url('../../res/fonts/icomoon.ttf?iyj5ao') format('truetype'),
-		url('../../res/fonts/icomoon.svg?iyj5ao#icomoon') format('svg');
+	src:url('../../res/fonts/icomoon.eot?-tn45y9');
+	src:url('../../res/fonts/icomoon.eot?#iefix-tn45y9') format('embedded-opentype'),
+		url('../../res/fonts/icomoon.woff?-tn45y9') format('woff'),
+		url('../../res/fonts/icomoon.ttf?-tn45y9') format('truetype'),
+		url('../../res/fonts/icomoon.svg?-tn45y9#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -31,7 +31,27 @@
 	content: "\e601";
 }
 
-.icon-twitter:before {
+.icon-github:before {
 	content: "\e602";
+}
+
+.icon-hashtag:before {
+	content: "\e603";
+}
+
+.icon-heart:before {
+	content: "\e604";
+}
+
+.icon-location:before {
+	content: "\e605";
+}
+
+.icon-spotify:before {
+	content: "\e606";
+}
+
+.icon-twitter:before {
+	content: "\e607";
 }
 

@@ -15,7 +15,7 @@
 			}
 		}
 		p {
-			margin: 0 5% 2% 5%;
+			margin: 0 5% 5% 5%;
 		}
 		@include media($mobile) {
 			margin-bottom: 100px;
@@ -23,14 +23,16 @@
 	}
 	.flower-all {
 		padding-top: 100px;
+		@include media($mobile) {
+			padding-top: 0px;
+		}
 	}
 	.flower {
 		vertical-align: top;
 		display: inline-block;
 		width: 300px;
 		max-width: 90%;
-		// padding: 0 35%;
-		margin: 0 5% 40px 5%;
+		margin: 0 5% 100px 5%;
 		.logo {
 			height: 200px;
 			img {
@@ -40,29 +42,32 @@
 			}
 		}
 		p {
-			margin: 0 5% 2% 5%;
+			margin: 0 5% 5% 5%;
 			font-size: 1em;
 		}
 		@include media($mobile) {
-			margin-bottom: 100px;
+			margin-bottom: 50px;
 		}
 	}
 	.seed-all {
-		padding-top: 100px;
 		width: 90%;
 		margin: auto;
-		text-align: center;
+		padding-top: 100px;
+		margin-bottom: -100px;
 		@include media($mobile) {
-			padding-top: 0px;
+			padding-top: 50px;
+			margin-bottom: -20px;
 		}
 	}
 	.seed {
-		vertical-align: top;
+		vertical-align: middle;
 		display: inline-block;
 		width: 200px;
 		max-width: 30%;
-		// padding: 0 35%;
-		margin: 0 5% 40px 5%;
+		margin: 0 5% 100px 5%;
+		@include media($mobile) {
+			margin: 0 5% 20px 5%;
+		}
 		.logo {
 			height: 100px;
 			img {
