@@ -26,11 +26,11 @@
     display: block;
     //For textwrap on small width
     @include media($mobile) {
-      font-size: 12vmax;
+      font-size: 12vmin;
       //padding: 0 7%;
-      @include media($height-hd) {
-        font-size: 10vmax;
-      }
+      // @include media($height-hd) {
+      //   font-size: 10vmax;
+      // }
     }
     //To limit size when shown on widescreen
     @include media($desktop) {
@@ -44,18 +44,18 @@
     @include media($height-small) {
       font-size: 10vmin;
       //Extreme cases
-      float: left;
+      // float: left;
       padding-top: 35vh;
-      width: 50vw;
-      height: 100vh;
+      // width: 50vw;
+      // height: 100vh;
       @include media($mobile) {
-        padding-top: 20vh;
+        padding-top: 10vh;
       }
       @include media($mobile-wide) {
        padding-top: 20vh;
       }
       @include media($tablet) {
-        padding-top: 20vh;
+        padding-top: 5vh;
       }
     }
     @include media($height-special-case) {
@@ -63,9 +63,9 @@
       @include media($mobile) {
         font-size: 14vmin;
       }
-      @include media($desktop) {
-        font-size: 8vw;
-      }
+      // @include media($desktop) {
+      //   font-size: 8vw;
+      // }
       @include media($desktop-wide) {
         font-size: 15vmin;
       }
@@ -81,134 +81,135 @@
       letter-spacing: 1em;
       transform: translateX(1em);
       font-size: .2em;
+      padding-top: 20vh;
       @include media($height-small) {
         font-size: 4vmin;
-        @include media($desktop) {
-          font-size: 7vmin;
-        }
+        padding-top: 1vh;
+        // @include media($desktop) {
+        //   font-size: 7vmin;
+        // }
       }
       @include media($height-special-case) {
-        font-size: 3vmin;
-        @include media($desktop) {
-         font-size: 1.2vw;
-        }
+        font-size: 4vmin;
+        // @include media($desktop) {
+        //  // font-size: 1.2vw;
+        // }
       }
 
-      padding-top: 20vh;
       //Change padding on small width
-      @include media($mobile) {
-        padding-top: 10vh;
-        @include media($height-hd) {
-          padding-top: 20vh;
-        }
-      }
-      @include media($mobile-wide) {
-        padding-top: 10vh;
-        @include media($height-hd) {
-          padding-top: 20vh;
-        }
-      }
-      @include media($desktop) {
-        padding-top: 20vh;
-        @include media($height-special-case) {
-         padding-top: 10vh;
-        }
-      }
-      //Give some space when widescreen
-      @include media($desktop-wide) {
-        padding-top: 15vh;
-        //With lots of pixels, this will come in handy
-        @include media($height-hd) {
-          padding-top: 20vh;
-        }
-      }
-      //Extreme cases
-      @include media($height-small) {
-        float: left;
-        padding-top: 35vh;
-        width: 50vw;
-        @include media($mobile) {
-          padding-top: 3vh;
-        }
-        @include media($mobile-wide) {
-         padding-top: 3vh;
-        }
-        @include media($tablet) {
-          padding-top: 3vh;
-        }
-      }
+      // @include media($mobile) {
+      //   padding-top: 10vh;
+      //   @include media($height-hd) {
+      //     padding-top: 20vh;
+      //   }
+      // }
+      // @include media($mobile-wide) {
+      //   padding-top: 10vh;
+      //   @include media($height-hd) {
+      //     padding-top: 20vh;
+      //   }
+      // }
+      // @include media($desktop) {
+      //   padding-top: 20vh;
+      //   @include media($height-special-case) {
+      //    padding-top: 10vh;
+      //   }
+      // }
+      // //Give some space when widescreen
+      // @include media($desktop-wide) {
+      //   padding-top: 15vh;
+      //   //With lots of pixels, this will come in handy
+      //   @include media($height-hd) {
+      //     padding-top: 20vh;
+      //   }
+      // }
+      // //Extreme cases
+      // @include media($height-small) {
+      //   // float: left;
+      //   padding-top: 35vh;
+      //   // width: 50vw;
+      //   @include media($mobile) {
+      //     padding-top: 3vh;
+      //   }
+      //   @include media($mobile-wide) {
+      //    padding-top: 3vh;
+      //   }
+      //   @include media($tablet) {
+      //     padding-top: 3vh;
+      //   }
+      // }
     }
   }
 
-  .collaboration {
-      position: relative;
-      width: 100vw;
-      display: inline-block;
-      * {
-        position: relative;
-        left: 5%;
-        opacity: 0;
-      }
-      //fix so it's not center on desktops
-      @include media($desktop) {
-        padding-left: 30vw;
-      }
-      @include media($height-small) {
-        float: right;
-        padding-top: 30vh;
-        padding-left: 0;
-        width: 50vw;
-        @include media($mobile) {
-         padding-top: 20vh;
-        }
-        @include media($mobile-wide) {
-         padding-top: 20vh;
-        }
-        @include media($tablet) {
-         padding-top: 20vh;
-        }
-        @include media($desktop-wide) {
-          padding-top: 20vh;
-        }
-      }
+  // .collaboration {
+  //     position: relative;
+  //     width: 100vw;
+  //     display: inline-block;
+  //     * {
+  //       position: relative;
+  //       left: 5%;
+  //       opacity: 0;
+  //     }
+  //     //fix so it's not center on desktops
+  //     @include media($desktop) {
+  //       padding-left: 30vw;
+  //     }
+  //     @include media($height-small) {
+  //       float: right;
+  //       padding-top: 30vh;
+  //       padding-left: 0;
+  //       width: 50vw;
+  //       @include media($mobile) {
+  //        padding-top: 20vh;
+  //       }
+  //       @include media($mobile-wide) {
+  //        padding-top: 20vh;
+  //       }
+  //       @include media($tablet) {
+  //        padding-top: 20vh;
+  //       }
+  //       @include media($desktop-wide) {
+  //         padding-top: 20vh;
+  //       }
+  //     }
 
-      //"in collaboration with - "
-      h2 {
-        display: inline-block;
-        font-size: 4vw;
-        //make sure size not too small on small screen
-        @include media($mobile) {
-          font-size: 4vw;
-        }
-        @include media($desktop) {
-          font-size: 1.5vw;
-        }
-        //Remove margin in extreme case
-        @include media($height-small) {
-          font-size: 5vmin;
-          vertical-align: middle;
-        }
-      }
-      //Spotify logo
-      img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
-        width: 20vw;
-        @include media($mobile) {
-          width: 30vw;
-        }
-        @include media($desktop) {
-          width: 200px;
-        }
-      }
-  }
+  //     //"in collaboration with - "
+  //     h2 {
+  //       display: inline-block;
+  //       font-size: 4vw;
+  //       //make sure size not too small on small screen
+  //       @include media($mobile) {
+  //         font-size: 4vw;
+  //       }
+  //       @include media($desktop) {
+  //         font-size: 1.5vw;
+  //       }
+  //       //Remove margin in extreme case
+  //       @include media($height-small) {
+  //         font-size: 5vmin;
+  //         vertical-align: middle;
+  //       }
+  //     }
+  //     //Spotify logo
+  //     img {
+  //       display: inline-block;
+  //       vertical-align: middle;
+  //       margin-left: 10px;
+  //       width: 20vw;
+  //       @include media($mobile) {
+  //         width: 30vw;
+  //       }
+  //       @include media($desktop) {
+  //         width: 200px;
+  //       }
+  //     }
+  // }
 
   .header-info {
     opacity: 0;
     @include media($height-small) {
-      width: 50vw;
-      float: left;
+      // width: 50vw;
+      // float: left;
     }
     font-size: 4vw;
     @include media($mobile) {
