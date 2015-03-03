@@ -172,17 +172,16 @@ $(document).ready(function() {
 			   		if (i<27) {
 						stats[0].innerHTML=i+1;
 					}
-					if (i<127) {
+					if (i<97) {
 						stats[1].innerHTML=i+1;
 					}
 					if (i<1) {
 						stats[2].innerHTML=i+1;
 					}
 					if (i<1014) {
-						stats[3].innerHTML=i+6;
+						stats[3].innerHTML=i+16;
 					}
-					i = ((i <= 127) ? i+2 : i+80);
-					// i = i+2;
+					i = ((i <= 97) ? i+2 : i+90);
 					if (i<1014) countStats(i);
 			   	}, 30)
 			})(0);  

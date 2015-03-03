@@ -6,6 +6,8 @@ var gulp          = require('gulp');
     minifycss     = require('gulp-minify-css'),
     rename        = require('gulp-rename'),
     images        = require('gulp-imagemin');
+    uglify        = require('gulp-uglify');
+
 
 /* Paths
 -------------------------------------*/
@@ -13,7 +15,9 @@ var paths = {
   scss:       'stylesheets/main.scss',
   css:        'build/css/',
   cssReload:  'build/css/main.css',
-  html:       '*.html'
+  html:       '*.html',
+  js:         'scripts/main.js',
+  jsmin:      'build/scripts/'
 };
 
 
@@ -68,15 +72,23 @@ gulp.task("images", function(){
     .pipe(gulp.dest("build/images"));
 });
 
+//JS uglify
+gulp.task('uglify', function() {
+  gulp.src(paths.js)
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.jsmin))
+});
+
 /* Watchers
 -------------------------------------*/
 gulp.task('watch', function() {
   gulp.watch('stylesheets/**/*.scss', ['styles']);
+  gulp.watch(paths.js, ['uglify']);
   gulp.watch(paths.html, notifyLiveReload);
   gulp.watch(paths.cssReload, notifyLiveReload);
 });
 
 
-gulp.task('default', ['express', 'styles', 'livereload', 'watch'], function() {
+gulp.task('default', ['express', 'styles', 'uglify', 'livereload', 'watch'], function() {
 
 });
