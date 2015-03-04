@@ -97,7 +97,7 @@ $(document).ready(function() {
 	$(window).bind('scroll',function(e){
    		parallaxScroll();
    	});
- 
+
    	function parallaxScroll(){
    		yStart = $('.ocean-break').offset().top - $(window).scrollTop();
    		var scrolledY = window.innerHeight - yStart - (window.innerHeight/100)*35;
@@ -113,7 +113,7 @@ $(document).ready(function() {
    			scaleVal = x = y = 0;
    			$(this).animate({borderSpacing: -720*2}, {
 			    step: function(now,fx) {
-					$(this).css('-webkit-transform','rotate('+now+'deg)'); 
+					$(this).css('-webkit-transform','rotate('+now+'deg)');
 					$(this).css('-moz-transform','rotate('+now+'deg)');
 					$(this).css('transform','rotate('+now+'deg)');
 			    },
@@ -145,23 +145,23 @@ $(document).ready(function() {
 
   	//Don't show last four pictures in last year section on resize to small
 	$(window).resize(function() {
-		if (window.innerWidth <= 480 && pics[4].style.display != 'none') {
-			for(var i = 4; i < pics.length; i++) {
-				pics[i].style.display = 'none';
-			}
-		}
-		//show them again if bigger screen
-		else if (window.innerWidth > 480 && pics[4].style.display == 'none') {
-			for(var i = 4; i < pics.length; i++) {
-				pics[i].style.display = 'inline';
-			}
-		}
+		// if (window.innerWidth <= 480 && pics[4].style.display != 'none') {
+		// 	for(var i = 4; i < pics.length; i++) {
+		// 		pics[i].style.display = 'none';
+		// 	}
+		// }
+		// //show them again if bigger screen
+		// else if (window.innerWidth > 480 && pics[4].style.display == 'none') {
+		// 	for(var i = 4; i < pics.length; i++) {
+		// 		pics[i].style.display = 'inline';
+		// 	}
+		// }
 
 		//Make sure "the day" texts end up on same place
 		var text1y = $('.the-day-text:eq(0)').position().top;
 		$('.the-day-text:eq(1)').css('top', text1y);
 	});
-	
+
 	//Count statistics
 	// var statsDone = false;
 	// $(document).on('scroll', function() {
@@ -203,3 +203,9 @@ $(document).ready(function() {
 
 });
 
+$(function () {
+  var secondsToHack = countdown(1429524000000, function(ts) {
+      $("#countdown").text(ts.seconds);
+    },
+    countdown.SECONDS);
+});

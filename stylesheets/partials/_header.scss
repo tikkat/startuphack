@@ -95,49 +95,6 @@
         //  // font-size: 1.2vw;
         // }
       }
-
-      //Change padding on small width
-      // @include media($mobile) {
-      //   padding-top: 10vh;
-      //   @include media($height-hd) {
-      //     padding-top: 20vh;
-      //   }
-      // }
-      // @include media($mobile-wide) {
-      //   padding-top: 10vh;
-      //   @include media($height-hd) {
-      //     padding-top: 20vh;
-      //   }
-      // }
-      // @include media($desktop) {
-      //   padding-top: 20vh;
-      //   @include media($height-special-case) {
-      //    padding-top: 10vh;
-      //   }
-      // }
-      // //Give some space when widescreen
-      // @include media($desktop-wide) {
-      //   padding-top: 15vh;
-      //   //With lots of pixels, this will come in handy
-      //   @include media($height-hd) {
-      //     padding-top: 20vh;
-      //   }
-      // }
-      // //Extreme cases
-      // @include media($height-small) {
-      //   // float: left;
-      //   padding-top: 35vh;
-      //   // width: 50vw;
-      //   @include media($mobile) {
-      //     padding-top: 3vh;
-      //   }
-      //   @include media($mobile-wide) {
-      //    padding-top: 3vh;
-      //   }
-      //   @include media($tablet) {
-      //     padding-top: 3vh;
-      //   }
-      // }
     }
   }
 
@@ -179,7 +136,10 @@
       }
     }
 
-    &:hover { @include hover; }
+    //Remove later when the application opens.
+    cursor: default;
+
+    /* &:hover { @include hover; } */
   }
 
   .arrow-down {
@@ -204,6 +164,14 @@
           width: 70px;
         }
       }
+    }
+  }
+
+  h3{
+    font-size: 40px;
+
+    @include media($mobile){
+      font-size: 24px;
     }
   }
 }
