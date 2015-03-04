@@ -52,7 +52,7 @@ function fixFloat(elem) {
 var stats;
 $(document).ready(function() {
 	//animate header
-	$('header[role="banner"] > *').animate({
+	$('.header-logo').animate({
 		left: 0,
 		opacity: 1
 	}, 1000);
