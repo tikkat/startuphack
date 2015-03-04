@@ -84,14 +84,14 @@ $(document).ready(function() {
 	});
 
 	//Get all stats for last year section
-	stats = $('.statistics > h3');
+	// stats = $('.statistics > h3');
 	//Don't show last four pictures in last year section on mobile
-	var pics = $('.last-year > img');
-	if(window.innerWidth <= 480) {
-		for(var i = 4; i < pics.length; i++) {
-			pics[i].style.display = 'none';
-		}
-	}
+	// var pics = $('.last-year > img');
+	// if(window.innerWidth <= 480) {
+	// 	for(var i = 4; i < pics.length; i++) {
+	// 		pics[i].style.display = 'none';
+	// 	}
+	// }
 
 	//pirallax
 	$(window).bind('scroll',function(e){
@@ -163,30 +163,30 @@ $(document).ready(function() {
 	});
 	
 	//Count statistics
-	var statsDone = false;
-	$(document).on('scroll', function() {
-		if (isScrolledIntoView('.statistics') && !statsDone) {
-			(function countStats(i) {
-				statsDone = true;
-				setTimeout(function () {
-			   		if (i<27) {
-						stats[0].innerHTML=i+1;
-					}
-					if (i<97) {
-						stats[1].innerHTML=i+1;
-					}
-					if (i<1) {
-						stats[2].innerHTML=i+1;
-					}
-					if (i<1014) {
-						stats[3].innerHTML=i+16;
-					}
-					i = ((i <= 97) ? i+2 : i+90);
-					if (i<1014) countStats(i);
-			   	}, 30)
-			})(0);  
-		}
-	});
+	// var statsDone = false;
+	// $(document).on('scroll', function() {
+	// 	if (isScrolledIntoView('.statistics') && !statsDone) {
+	// 		(function countStats(i) {
+	// 			statsDone = true;
+	// 			setTimeout(function () {
+	// 		   		if (i<27) {
+	// 					stats[0].innerHTML=i+1;
+	// 				}
+	// 				if (i<97) {
+	// 					stats[1].innerHTML=i+1;
+	// 				}
+	// 				if (i<1) {
+	// 					stats[2].innerHTML=i+1;
+	// 				}
+	// 				if (i<1014) {
+	// 					stats[3].innerHTML=i+16;
+	// 				}
+	// 				i = ((i <= 97) ? i+2 : i+90);
+	// 				if (i<1014) countStats(i);
+	// 		   	}, 30)
+	// 		})(0);  
+	// 	}
+	// });
 
 	//fix span arrow and float in crew
 	var peoples = $('.people');

@@ -1,5 +1,6 @@
 .the-day {
   color: white;
+  padding: 2% 0;
   text-align: center;
   background-color: $base-dark-background-color;
   width: 100vw;
@@ -72,15 +73,15 @@
     margin-bottom: 0;
     padding-bottom: 5em;
     @include media($desktop){
-      -moz-column-count: 3;
-      -moz-column-gap: 50px;
-      -webkit-column-count: 3;
-      -webkit-column-gap: 50px;
-      text-align: left;
-      margin: 3em 10% 0 10%;
+      // -moz-column-count: 3;
+      // -moz-column-gap: 50px;
+      // -webkit-column-count: 3;
+      // -webkit-column-gap: 50px;
+      text-align: justify;
+      margin: 1em 10% 0 10%;
     }
     @include media($widewide) {
-      margin: 3em 20% 0 20%;
+      margin: 1em 20% 0 20%;
     }
     &:nth-child(even) {
       position: absolute;

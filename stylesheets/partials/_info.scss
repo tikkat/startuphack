@@ -12,4 +12,10 @@
   	font-size: 2em;
   	vertical-align: middle;
   }
+  a:hover {
+    text-decoration: none;
+  }
+  a:hover>span {
+    text-decoration: underline;
+  }
 }

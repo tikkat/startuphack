@@ -62,13 +62,12 @@
 			bottom: -5px;
 			border: 0;
 			outline: none;
-			background-color: #59ADEC;
-			color: #fff;
+			background-color: $base-dark-background-color;
+			color: $header-light-color;
 			border-radius: 10px;
 			i {
 				font-size: 1.5em;
 				vertical-align: middle;
-				color: #fff;
 			}
 			.icon-heart {
 				font-size: 0.8em;

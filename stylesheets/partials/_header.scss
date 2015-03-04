@@ -141,77 +141,9 @@
     }
   }
 
-  // .collaboration {
-  //     position: relative;
-  //     width: 100vw;
-  //     display: inline-block;
-  //     * {
-  //       position: relative;
-  //       left: 5%;
-  //       opacity: 0;
-  //     }
-  //     //fix so it's not center on desktops
-  //     @include media($desktop) {
-  //       padding-left: 30vw;
-  //     }
-  //     @include media($height-small) {
-  //       float: right;
-  //       padding-top: 30vh;
-  //       padding-left: 0;
-  //       width: 50vw;
-  //       @include media($mobile) {
-  //        padding-top: 20vh;
-  //       }
-  //       @include media($mobile-wide) {
-  //        padding-top: 20vh;
-  //       }
-  //       @include media($tablet) {
-  //        padding-top: 20vh;
-  //       }
-  //       @include media($desktop-wide) {
-  //         padding-top: 20vh;
-  //       }
-  //     }
-
-  //     //"in collaboration with - "
-  //     h2 {
-  //       display: inline-block;
-  //       font-size: 4vw;
-  //       //make sure size not too small on small screen
-  //       @include media($mobile) {
-  //         font-size: 4vw;
-  //       }
-  //       @include media($desktop) {
-  //         font-size: 1.5vw;
-  //       }
-  //       //Remove margin in extreme case
-  //       @include media($height-small) {
-  //         font-size: 5vmin;
-  //         vertical-align: middle;
-  //       }
-  //     }
-  //     //Spotify logo
-  //     img {
-  //       display: inline-block;
-  //       vertical-align: middle;
-  //       margin-left: 10px;
-  //       width: 20vw;
-  //       @include media($mobile) {
-  //         width: 30vw;
-  //       }
-  //       @include media($desktop) {
-  //         width: 200px;
-  //       }
-  //     }
-  // }
-
   .header-info {
     opacity: 0;
-    @include media($height-small) {
-      // width: 50vw;
-      // float: left;
-    }
-    font-size: 4vw;
+    font-size: 6vw;
     @include media($mobile) {
       margin: 5vh 0;
     }
@@ -219,8 +151,9 @@
       font-size: 1em;
     }
     @include media($desktop) {
-      font-size: 1.50em;
-      margin-top: 4vh;
+      // font-size: 1.5em;
+      font-size: 3.5em;
+      margin-top: 2vh;
       @include media($height-special-case) {
         font-size: 1em;
         margin-top: 5vh;
