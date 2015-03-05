@@ -772,7 +772,8 @@ html, body {
   background-color: #fdfdfd;
   color: #424242;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   text-decoration: none;
@@ -818,7 +819,7 @@ a:hover {
   text-align: left; }
   @media screen and (min-width: 850px) {
     .info p {
-      margin: 1.33333em 30%; } }
+      margin: 1.33333em 25%; } }
 .info i {
   font-size: 2em;
   vertical-align: middle; }
@@ -958,14 +959,13 @@ h4 {
   font-size: 0.9375em; }
 
 p {
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 18px;
   text-align: center;
   line-height: 170%;
-  margin: 0 15% 1.33333em; }
-  @media screen and (max-width: 480px) {
+  margin: 0 10% 1.33333em; }
+  @media screen and (min-width: 850px) {
     p {
-      margin: 0 10%; } }
+      margin: 0 25% 1.33333em; } }
 
 [role="banner"] {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../build/images/header-background.jpg) no-repeat fixed;
@@ -1089,7 +1089,7 @@ footer {
   .standard-footer p {
     font-size: 16px;
     text-align: center;
-    font-size: 0.8em; }
+    font-size: 14px; }
 
 .last-year {
   position: relative; }
@@ -1203,6 +1203,8 @@ footer {
     @media screen and (min-width: 700px) {
       .sign-up h1 {
         font-size: 5em; } }
+  .sign-up p {
+    margin: 0 15% 1.33333em; }
   .sign-up i {
     font-size: 2em;
     vertical-align: middle; }
@@ -1229,6 +1231,8 @@ footer {
       .location .location-left {
         width: 40vw;
         margin-right: 10vw; } }
+    .location .location-left p {
+      margin: 0 15% 1.33333em; }
   .location a:hover {
     text-decoration: none; }
   .location a:hover > span {
