@@ -2,7 +2,7 @@
   p {
     text-align: left;
     @include media($desktop){
-      margin: $lineheight 30%;
+      margin: $lineheight $margin-sides;
     }
 
 

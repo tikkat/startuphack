@@ -5,19 +5,19 @@
 @import "../modules/all";
 
 html, body {
-  background-color:  $base-background-color;
-  color:             $base-text-color;
-  font-family:       $default-font;
-  overflow-x: hidden;
+  background-color:       $base-background-color;
+  color:                  $base-text-color;
+  font-family:            $default-font;
+  overflow-x:             hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  text-decoration: none;
-  color: #428bca;
-  font-weight: 600;
+  text-decoration:        none;
+  color:                  #428bca;
+  font-weight:            600;
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration:        underline;
 }
-

@@ -28,12 +28,11 @@ h4 {
 
 p {
   font-size: $default-font-size;
-  font-weight: 100;
   text-align: center;
   line-height: 170%;
+  margin: 0 10% $lineheight;
 
-  margin: 0 15% $lineheight;
-  @include media($mobile){
-    margin: 0 10%;
+  @include media($desktop){
+    margin: 0 $margin-sides $lineheight;
   }
 }
