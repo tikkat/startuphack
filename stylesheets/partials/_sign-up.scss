@@ -33,7 +33,9 @@
 			font-size: 5em;
 		}
 	}
-
+	p {
+		margin: 0 15% $lineheight;
+	}
 	i {
 		font-size: 2em;
 		vertical-align: middle;
