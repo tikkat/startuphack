@@ -804,10 +804,15 @@ a:hover {
       font-size: 1.5em; } }
 
 .intro h1 {
-  padding-top: 1em;
-  text-decoration: none; }
-.intro p {
+  padding-top: 1em; }
+.intro p:last-child {
   padding-bottom: 8em; }
+.intro a:hover {
+  text-decoration: none; }
+.intro a:hover > span {
+  text-decoration: underline; }
+.intro .icon-hashtag {
+  font-size: 0.8em; }
 
 .info p {
   text-align: left; }

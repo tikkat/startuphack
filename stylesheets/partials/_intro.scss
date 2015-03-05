@@ -2,17 +2,18 @@
 
   h1 {
     padding-top: 1em;
-    text-decoration: none;
-
-    // span {
-    //   border-bottom-style: solid;
-    //   border-bottom-width: 4px;
-    //   text-decoration: none;
-    // }
-
   }
 
-  p {
+  p:last-child {
     padding-bottom: 8em;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:hover>span {
+    text-decoration: underline;
+  }
+  .icon-hashtag {
+    font-size: 0.8em;
   }
 }
